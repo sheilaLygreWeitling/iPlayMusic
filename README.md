@@ -47,10 +47,6 @@ Add Light/Dark mode
 
 ## dependencies
 
-- Tailwind
-- FramerMotion
-- react-router
-- et eller andet carousel ??
 - yup ??
 - prettier (vscode)
 
