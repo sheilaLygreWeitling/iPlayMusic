@@ -2,10 +2,10 @@
 
 ## medlemmer
 
-Marcus
-Sheila
-Aske
-özlem
+- Marcus
+- Sheila
+- Aske
+- özlem
 
 ## opgave beskrivelse
 
