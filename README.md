@@ -50,8 +50,6 @@ Add Light/Dark mode
 - yup ??
 - prettier (vscode)
 
-npm uninstall tailwind
-
 npm install -D tailwindcss
 npx tailwindcss init
 
