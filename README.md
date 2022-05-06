@@ -51,8 +51,10 @@ Add Light/Dark mode
 - FramerMotion
 - et eller andet carousel ??
 - react-router
+- yup ??
 
 ## konsulenter
+
 - christian
 - magnus
 - oliver
