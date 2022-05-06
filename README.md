@@ -24,6 +24,8 @@ hvad er vores dependencies ???
 	skriv til readme
 		tailwinds
 
+Lav userstories og lav dem om til issues.
+
 brug img framework fra opgavebeskrivelse eller hiv SVGerne ud fra xd?
 
 skriv minimum viable product
