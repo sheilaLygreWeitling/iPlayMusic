@@ -49,10 +49,15 @@ Add Light/Dark mode
 
 - Tailwind
 - FramerMotion
-- et eller andet carousel ??
 - react-router
+- et eller andet carousel ??
 - yup ??
-- prettier
+- prettier (vscode)
+
+npm i tailwind
+npm i framer-motion
+
+npm i react-router
 
 ## konsulenter
 
