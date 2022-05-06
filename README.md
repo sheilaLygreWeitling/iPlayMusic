@@ -52,6 +52,7 @@ Add Light/Dark mode
 - et eller andet carousel ??
 - react-router
 - yup ??
+- prettier
 
 ## konsulenter
 
