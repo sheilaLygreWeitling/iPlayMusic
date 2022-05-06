@@ -29,7 +29,7 @@ brug img framework fra opgavebeskrivelse eller hiv SVGerne ud fra xd?
 skriv minimum viable product
 	hent playliste / afspille musik, byg videre derfra
 	beskrive MVP specifikt med ting der skal programmeres
-	
+
 ## dependencies
 
 - Tailwind
