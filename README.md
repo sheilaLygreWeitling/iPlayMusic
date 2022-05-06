@@ -56,7 +56,7 @@ Add Light/Dark mode
 
 npm i tailwind
 npm i framer-motion
-
+npm i react-carousel-light
 npm i react-router
 
 ## konsulenter
