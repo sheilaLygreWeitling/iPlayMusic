@@ -1,5 +1,12 @@
 # iPlayMusic
 
+## medlemmer
+
+Marcus
+Sheila
+Aske
+özlem
+
 ## opgave beskrivelse
 
 - https://github.com/rts-cmk-opgaver/IPlayMusic
