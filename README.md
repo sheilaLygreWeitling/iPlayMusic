@@ -35,4 +35,3 @@ skriv minimum viable product
 - magnus
 - oliver
 - sebastian
-- 
