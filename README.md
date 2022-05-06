@@ -15,12 +15,9 @@
 ## noter
 
 light/dark mode er hvidorange til orange
+husk Featured (index) skal senere integrere lazyload
 
 ## todo
-
-npx create react app
-
-add routing
 
 Lav userstories og lav dem om til issues.
 
@@ -29,6 +26,24 @@ brug img framework fra opgavebeskrivelse eller hiv SVGerne ud fra xd?
 skriv minimum viable product
 	hent playliste / afspille musik, byg videre derfra
 	beskrive MVP specifikt med ting der skal programmeres
+
+## issues
+
+Get image assets
+
+Add initial project
+
+add page Routing
+  Featured (index)
+  Albums
+  Album Details
+  Categories
+  Playlists
+  Player
+
+Add Light/Dark mode
+  usestate
+  localstorage
 
 ## dependencies
 
