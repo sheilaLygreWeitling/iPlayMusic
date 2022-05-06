@@ -18,7 +18,9 @@ light/dark mode er hvidorange til orange
 
 ## todo
 
-skriv vores roller ned i readme.md
+npx create react app
+
+add routing
 
 hvad er vores dependencies ???
 	skriv til readme
