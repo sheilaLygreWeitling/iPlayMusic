@@ -50,7 +50,12 @@ Add Light/Dark mode
 - yup ??
 - prettier (vscode)
 
-npm i tailwind
+npm uninstall tailwind
+
+npm install -D tailwindcss
+npx tailwindcss init
+
+
 npm i framer-motion
 npm i react-carousel-light
 npm i react-router
