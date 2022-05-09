@@ -14,34 +14,15 @@
 
 ## noter
 
-Light/Dark mode
-  hvidorange til orange
-  skal laves med context?
 husk Featured (index) skal senere integrere lazyload
-skriv minimum viable product
-  Beskrivelse:
-	  hent playliste / afspille musik, byg videre derfra
-
-    afspille musik, søge efter kunstnere og hente playlister
-  MVP:
+MVP:
+  hent playliste / afspille musik, byg videre derfra
+  afspille musik, søge efter kunstnere og hente playlister
+  pages:
     intro page
     all songs
     music player
-
-    hvad for nogle sider blev vi enige om til MVP ??
-
-## todo
-
-Get image assets
-  først MVP sider
-add page Routing
-  Featured (index)
-  Albums
-  Album Details
-  Categories
-  Playlists
-  Player
-spotify api?
+spotify api
 
 ## dependencies
 
