@@ -1,7 +1,7 @@
-import { Routes, Route } from "react-router-dom"
-import Home from './pages/Home'
-import Page1 from './pages/Page1'
-import Page2 from './pages/Page2'
+import { Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import Page1 from "./pages/Page1";
+import Page2 from "./pages/Page2";
 
 function App() {
   return (
@@ -18,7 +18,7 @@ function App() {
         <Route path="/Page2" element={<Page2 />} />
       </Routes>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
