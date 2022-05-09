@@ -14,50 +14,26 @@
 
 ## noter
 
-light/dark mode er hvidorange til orange
-light/dark mode use context ??
+Light/Dark mode
+  hvidorange til orange
+  skal laves med context?
 husk Featured (index) skal senere integrere lazyload
 skriv minimum viable product
   Beskrivelse:
 	  hent playliste / afspille musik, byg videre derfra
+
+    afspille musik, søge efter kunstnere og hente playlister
   MVP:
-    playlists page
-    player component
+    intro page
+    all songs
+    music player
+
+    hvad for nogle sider blev vi enige om til MVP ??
 
 ## todo
 
-forbedre userstories ?? lav dem om til issues.
-
-
-	observering:
-    featured
-      fetch
-      featured albums
-        if views
-        if rating
-    albums
-      fetch
-      featured albums & newest releases
-        if newest
-    album details
-      fetch
-        valgt album
-    categories
-      fetch
-        categories
-    playlists
-      forudvalgt playlist ??
-    player
-      fetch
-      component
-
-
-## issues
-
 Get image assets
-
-Add initial project
-
+  først MVP sider
 add page Routing
   Featured (index)
   Albums
@@ -65,10 +41,7 @@ add page Routing
   Categories
   Playlists
   Player
-
-Add Light/Dark mode
-  usestate
-  localstorage
+spotify api?
 
 ## dependencies
 
@@ -77,7 +50,6 @@ Add Light/Dark mode
 
 npm install -D tailwindcss
 npx tailwindcss init
-
 
 npm i framer-motion
 npm i react-carousel-light
