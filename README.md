@@ -82,10 +82,3 @@ npx tailwindcss init
 npm i framer-motion
 npm i react-carousel-light
 npm i react-router
-
-## konsulenter
-
-- christian
-- magnus
-- oliver
-- sebastian
