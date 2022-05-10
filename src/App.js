@@ -3,10 +3,10 @@ import HomePage from "./pages/HomePage";
 import { Routes, Route } from "react-router-dom";
 
 import NowPlaying from "./pages/Heading/NowPlaying";
-import Home from "./pages/Home";
 
 
-import HomePage from "./pages/HomePage";
+
+
 
 import Page1 from "./pages/Page1";
 
