@@ -11,6 +11,7 @@
 
 - https://github.com/rts-cmk-opgaver/IPlayMusic
 - kun til mobilen
+- spotify API
 
 ## noter
 
@@ -22,7 +23,6 @@ MVP:
     intro page
     all songs
     music player
-spotify api
 
 ## dependencies
 
@@ -35,3 +35,5 @@ npx tailwindcss init
 npm i framer-motion
 npm i react-carousel-light
 npm i react-router
+npm i react-icons
+npm install react-icons --save

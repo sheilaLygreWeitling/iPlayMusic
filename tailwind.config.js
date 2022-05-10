@@ -2,6 +2,7 @@ module.exports = {
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
+  darkMode: 'class',
   theme: {
     extend: {
       colors:{
@@ -26,7 +27,7 @@ module.exports = {
         'gradientBlueTo': '#115793',
         
         'gradientRedFrom': '#EE0979',
-        'gradientRedTo': '#3FF6A00',
+        'gradientRedTo': '#FF6A00',
         
         'reallyBlack': '#111111'
       },
