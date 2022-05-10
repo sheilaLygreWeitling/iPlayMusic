@@ -36,6 +36,20 @@ curl -i "https://api.spotify.com/v1/tracks/2KrxsD86ARO5beq7Q0Drfqa"
 
 curl -i "https://api.spotify.com/v1/artists/1vCWHaC5f2uS3yhpwWbIA6/albums?album_type=SINGLE&offset=20&limit=10"
 
+
+
+curl --request GET --url https://api.spotify.com/v1/recommendations/available-genre-seeds --header 'Authorization: ' --header 'Content-Type: application/json'
+
+curl --request GET --url https://api.spotify.com/v1/recommendations/available-genre-seeds --header 'Authorization: ' --header 'Content-Type: application/json' seed_artists '4NHQUGzhtTLFvgF5SZesLK' seed_genres 'classical,country' seed_tracks '0c6xIDDpzE81m2q797ordA'
+
+curl --request GET --url https://api.spotify.com/v1/recommendations --header 'Authorization: ' --header 'Content-Type: application/json' seed_artists '4NHQUGzhtTLFvgF5SZesLK' seed_genres 'classical,country' seed_tracks '0c6xIDDpzE81m2q797ordA'
+
+
+curl --request GET \
+  --url https://api.spotify.com/v1/recommendations \
+  --header 'Authorization: ' \
+  --header 'Content-Type: application/json'
+
 ## dependencies
 
 - yup ??
