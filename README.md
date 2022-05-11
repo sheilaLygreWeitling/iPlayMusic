@@ -60,6 +60,11 @@ curl --request GET --url https://api.spotify.com/v1/recommendations/available-ge
 
 curl --request GET --url https://api.spotify.com/v1/recommendations --header 'Authorization: ' --header 'Content-Type: application/json' seed_artists '4NHQUGzhtTLFvgF5SZesLK' seed_genres 'classical,country' seed_tracks '0c6xIDDpzE81m2q797ordA'
 
+
+https://developer.spotify.com/console/get-several-tracks/
+7ouMYWpwJ422jRcDASZB7P,4VqPOruhp5EdPBeR92t6lQ,2takcwOaAZWiXQijPHIx7B
+https://api.spotify.com/v1/tracks?ids=7ouMYWpwJ422jRcDASZB7P%2C4VqPOruhp5EdPBeR92t6lQ%2C2takcwOaAZWiXQijPHIx7B
+
 ## dependencies
 
 - yup ??

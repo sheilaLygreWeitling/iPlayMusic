@@ -40,11 +40,10 @@ const Searchcomp = () => {
       params: {
         q: searchKey,
         type: "artist",
-        // type: "track",
       },
     });
 
-    console.log(data)
+    // console.log(data)
 
     setArtists(data.artists.items);
   };

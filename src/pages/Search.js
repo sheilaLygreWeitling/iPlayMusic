@@ -7,7 +7,7 @@ const Search = () => {
 
       <Searchcomp />
 
-      {/* <Loadsongs /> */}
+      <Loadsongs />
 
     </div>
   )
