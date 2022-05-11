@@ -40,14 +40,19 @@ const Searchcomp = () => {
       params: {
         q: searchKey,
         type: "artist",
+        // type: "track",
       },
     });
 
-    setArtists(data.artists.items);
-
     console.log(data)
+
+    setArtists(data.artists.items);
   };
 
+  // https://accounts.spotify.com/da-DK/authorize?
+  // client_id=9d4b16ee4a594036945fc243b00d1491&
+  // redirect_uri=http://localhost:3000/Search&
+  // response_type=token
   const AUTH_ENDPOINT = "https://accounts.spotify.com/authorize";
   const CLIENT_ID = "9d4b16ee4a594036945fc243b00d1491";
   // const REDIRECT_URI = "http://localhost:3000";

@@ -50,6 +50,8 @@ https://open.spotify.com/embed/track/2UN0lp72LAusrXi8LLVomt?utm_source=generator
 https://open.spotify.com/track/2UN0lp72LAusrXi8LLVomt?si=52bba963de764946
 curl --request GET --url https://api.spotify.com/v1/track/2UN0lp72LAusrXi8LLVomt --header 'Authorization: ' --header 'Content-Type: application/json'
 
+https://api.spotify.com/v1/search?q=testshot+starfish&type=artist
+
 
 curl --request GET 'https://api.spotify.com/v1/track/2UN0lp72LAusrXi8LLVomt' --header 'Accept: application/json' --header 'Authorization: Bearer'
 curl --request GET 'https://api.spotify.com/v1/track/2UN0lp72LAusrXi8LLVomt' --header 'Accept: application/json' --header 'Authorization: Bearer 9d4b16ee4a594036945fc243b00d1491'
