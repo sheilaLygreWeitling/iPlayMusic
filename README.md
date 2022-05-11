@@ -25,7 +25,9 @@ MVP:
     intro page
     all songs
     music player
-spotify api
+
+## spotify api
+
 spotify endpoints
   https://developer.spotify.com/console/get-search-item/
 
@@ -56,7 +58,6 @@ curl --request GET --url https://api.spotify.com/v1/recommendations/available-ge
 
 curl --request GET --url https://api.spotify.com/v1/recommendations --header 'Authorization: ' --header 'Content-Type: application/json' seed_artists '4NHQUGzhtTLFvgF5SZesLK' seed_genres 'classical,country' seed_tracks '0c6xIDDpzE81m2q797ordA'
 
-
 ## dependencies
 
 - yup ??
@@ -69,4 +70,5 @@ npm i framer-motion
 npm i react-carousel-light
 npm i react-router
 npm i react-icons
-npm install react-icons --save
+npm i react-icons --save
+npm i axios
