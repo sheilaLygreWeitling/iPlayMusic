@@ -23,7 +23,6 @@ const Loadsongs = () => {
     setToken(token);
   }, []);
 
-  const [searchKey, setSearchKey] = useState("");
   const [artists, setArtists] = useState([]);
 
   const LoadSongs = async (e) => {
