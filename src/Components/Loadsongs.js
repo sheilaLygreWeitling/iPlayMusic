@@ -56,11 +56,11 @@ const Loadsongs = () => {
 
   const renderSongs = () => {
 
-    // return tracks.map((ident) => (
-    //   <div key={ident}>
-    //     hello {ident}
-    //   </div>
-    // ));
+    return tracks.map((track) => (
+      <div key={track.id}>
+        hello {track}
+      </div>
+    ));
 
     return (
       <div>
