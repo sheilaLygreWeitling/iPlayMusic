@@ -31,7 +31,6 @@ const Loadsongs = () => {
 
     var trackids = "7ouMYWpwJ422jRcDASZB7P%2C4VqPOruhp5EdPBeR92t6lQ%2C2takcwOaAZWiXQijPHIx7B"
     const { data } = await axios.get(`https://api.spotify.com/v1/tracks?ids=${trackids}`, {
-    // const { data } = await axios.get("https://api.spotify.com/v1/tracks?ids=7ouMYWpwJ422jRcDASZB7P%2C4VqPOruhp5EdPBeR92t6lQ%2C2takcwOaAZWiXQijPHIx7B", {
       headers: {
         Authorization: `Bearer ${token}`,
       }
