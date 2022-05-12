@@ -23,7 +23,7 @@ const Loadsongs = () => {
     setToken(token);
   }, []);
 
-  const [artists, setArtists] = useState([]);
+  const [tracks, setArtists] = useState([]);
 
   const LoadSongs = async (e) => {
     // e.preventDefault();
@@ -32,31 +32,50 @@ const Loadsongs = () => {
     // spotify example
     // https://api.spotify.com/v1/tracks/2KrxsD86ARO5beq7Q0Drfqa
     // https://api.spotify.com/v1/search?query=Testshot&type=artist&locale=da-DK%2Cda%3Bq%3D0.9%2Cen-US%3Bq%3D0.8%2Cen%3Bq%3D0.7&offset=0&limit=20
-    const { data } = await axios.get("https://api.spotify.com/v1/search?query=Testshot&type=artist&locale=da-DK%2Cda%3Bq%3D0.9%2Cen-US%3Bq%3D0.8%2Cen%3Bq%3D0.7&offset=0&limit=20", {
+
+    // til 3 tracks med tracks api
+    // 7ouMYWpwJ422jRcDASZB7P
+    // 2C4VqPOruhp5EdPBeR92t6lQ
+    // 2C2takcwOaAZWiXQijPHIx7B
+    // 7ouMYWpwJ422jRcDASZB7P%2C4VqPOruhp5EdPBeR92t6lQ%2C2takcwOaAZWiXQijPHIx7B
+    const { data } = await axios.get("https://api.spotify.com/v1/tracks?ids=7ouMYWpwJ422jRcDASZB7P", {
       headers: {
         Authorization: `Bearer ${token}`,
-      },
-      params: {
-        type: "artist",
-      },
+      }
     });
 
-    console.log(data)
+    // til 1 track med search api
+    // const { data } = await axios.get("https://api.spotify.com/v1/search?query=Testshot&type=artist&locale=da-DK%2Cda%3Bq%3D0.9%2Cen-US%3Bq%3D0.8%2Cen%3Bq%3D0.7&offset=0&limit=20", {
+    //   headers: {
+    //     Authorization: `Bearer ${token}`,
+    //   },
+    //   params: {
+    //     type: "artist",
+    //   },
+    // });
 
-    setArtists(data.artists.items);
+    console.log(data.tracks)
+    data.tracks.forEach(item => {
+      // console.log(item)
+      // console.log(item.preview_url)
+      // console.log(item.name)
+
+      // return <h1>song item</h1>
+
+    });
+
+
+    setArtists(data.tracks.items);
   };
 
+
+
   const renderSongs = () => {
-    return artists.map((artist) => (
-      <div key={artist.id}>
-        {artist.images.length ? (
-          <img width={"100%"} src={artist.images[0].url} />
-        ) : (
-          <div>No Image</div>
-        )}
-        {artist.name}
-      </div>
-    ));
+    // return tracks.map((track) => (
+    //   <div>
+    //       {track}
+    //   </div>
+    // ));
   };
 
   LoadSongs();
