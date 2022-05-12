@@ -21,38 +21,46 @@ const Loadsongs = () => {
     }
 
     setToken(token);
+
+
+
+    const InitialSongs = async (e) => {
+      // https://api.spotify.com/v1/me/tracks?limit=50
+      // prøv SPOTIFY me tracks
+
+      var trackids = "7ouMYWpwJ422jRcDASZB7P%2C4VqPOruhp5EdPBeR92t6lQ%2C2takcwOaAZWiXQijPHIx7B"
+      const { data } = await axios.get(`https://api.spotify.com/v1/tracks?ids=${trackids}`, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        }
+      });
+      console.log(data.tracks)
+      data.tracks.forEach(item => {
+        // console.log(item.name)
+        // console.log(item.id)
+      });
+
+      setArtists(data.tracks.name);
+    };
+
+
+    InitialSongs();
+
   }, []);
 
   const [tracks, setArtists] = useState([]);
 
-  const InitialSongs = async (e) => {
-    // https://api.spotify.com/v1/me/tracks?limit=50
-    // prøv SPOTIFY me tracks
 
-    var trackids = "7ouMYWpwJ422jRcDASZB7P%2C4VqPOruhp5EdPBeR92t6lQ%2C2takcwOaAZWiXQijPHIx7B"
-    const { data } = await axios.get(`https://api.spotify.com/v1/tracks?ids=${trackids}`, {
-      headers: {
-        Authorization: `Bearer ${token}`,
-      }
-    });
-    console.log(data.tracks)
-    data.tracks.forEach(item => {
-      // console.log(item.name)
-      // console.log(item.id)
-    });
-
-    setArtists(data.tracks.name);
-  };
 
 
 
   const renderSongs = () => {
 
-    return tracks.map((ident) => (
-      <div key={ident}>
-        hello {ident}
-      </div>
-    ));
+    // return tracks.map((ident) => (
+    //   <div key={ident}>
+    //     hello {ident}
+    //   </div>
+    // ));
 
     return (
       <div>
@@ -62,7 +70,7 @@ const Loadsongs = () => {
 
   };
 
-  InitialSongs();
+
 
   return (
     <header className="App-header">
