@@ -26,7 +26,12 @@ const Loadsongs = () => {
   const [tracks, setArtists] = useState([]);
 
   const InitialSongs = async (e) => {
-    const { data } = await axios.get("https://api.spotify.com/v1/tracks?ids=7ouMYWpwJ422jRcDASZB7P%2C4VqPOruhp5EdPBeR92t6lQ%2C2takcwOaAZWiXQijPHIx7B", {
+    // https://api.spotify.com/v1/me/tracks?limit=50
+    // prøv SPOTIFY me tracks
+
+    var trackids = "7ouMYWpwJ422jRcDASZB7P%2C4VqPOruhp5EdPBeR92t6lQ%2C2takcwOaAZWiXQijPHIx7B"
+    const { data } = await axios.get(`https://api.spotify.com/v1/tracks?ids=${trackids}`, {
+    // const { data } = await axios.get("https://api.spotify.com/v1/tracks?ids=7ouMYWpwJ422jRcDASZB7P%2C4VqPOruhp5EdPBeR92t6lQ%2C2takcwOaAZWiXQijPHIx7B", {
       headers: {
         Authorization: `Bearer ${token}`,
       }
@@ -44,9 +49,9 @@ const Loadsongs = () => {
 
   const renderSongs = () => {
 
-    return tracks.map((song, i) => (
-      <div key={i}>
-        hello {song.id}
+    return tracks.map((ident) => (
+      <div key={ident}>
+        hello {ident}
       </div>
     ));
 
