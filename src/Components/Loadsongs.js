@@ -25,7 +25,7 @@ const Loadsongs = () => {
 
   const [tracks, setArtists] = useState([]);
 
-  const LoadSongs = async (e) => {
+  const InitialSongs = async (e) => {
     const { data } = await axios.get("https://api.spotify.com/v1/tracks?ids=7ouMYWpwJ422jRcDASZB7P%2C4VqPOruhp5EdPBeR92t6lQ%2C2takcwOaAZWiXQijPHIx7B", {
       headers: {
         Authorization: `Bearer ${token}`,
@@ -33,29 +33,32 @@ const Loadsongs = () => {
     });
     console.log(data.tracks)
     data.tracks.forEach(item => {
-      console.log(item.name)
+      // console.log(item.name)
+      // console.log(item.id)
     });
 
-    setArtists(data.tracks.items);
+    setArtists(data.tracks.name);
   };
 
 
 
   const renderSongs = () => {
-    // return tracks.map((track) => (
-    //   <div>
-    //       {track}
-    //   </div>
-    // ));
 
-    // return tracks.map((item) => (
-    //   <div>
-    //       {item}
-    //   </div>
-    // ));
+    return tracks.map((song, i) => (
+      <div key={i}>
+        hello {song.id}
+      </div>
+    ));
+
+    return (
+      <div>
+        helllllllo
+      </div>
+    )
+
   };
 
-  LoadSongs();
+  InitialSongs();
 
   return (
     <header className="App-header">

@@ -43,6 +43,7 @@ const Searchcomp = () => {
       },
     });
 
+    // console.log(data.artists)
     setArtists(data.artists.items);
   };
 
