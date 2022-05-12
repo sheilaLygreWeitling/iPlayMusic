@@ -22,8 +22,6 @@ const Loadsongs = () => {
 
     setToken(token);
 
-
-
     const InitialSongs = async (e) => {
       // e.preventDefault();
       // ed sheeran
@@ -51,8 +49,6 @@ const Loadsongs = () => {
 
   const [artists, setArtists] = useState([]);
 
-
-
   const renderSongs = () => {
     return artists.map((artist) => (
       <div key={artist.id}>
@@ -65,8 +61,6 @@ const Loadsongs = () => {
       </div>
     ));
   };
-
-
 
   return (
     <header className="App-header">
