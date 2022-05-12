@@ -5,6 +5,9 @@ const Loadsongs = () => {
 
   const [token, setToken] = useState("");
 
+  const [tracksarray, setArtists] = useState([]);
+
+
   useEffect(() => {
     const hash = window.location.hash;
     let token = window.localStorage.getItem("token");
@@ -24,23 +27,32 @@ const Loadsongs = () => {
 
 
 
-    const InitialSongs = async (e) => {
+    const InitialSongs = async () => {
       // https://api.spotify.com/v1/me/tracks?limit=50
       // prøv SPOTIFY me tracks
 
       var trackids = "7ouMYWpwJ422jRcDASZB7P%2C4VqPOruhp5EdPBeR92t6lQ%2C2takcwOaAZWiXQijPHIx7B"
+      // var trackids = "4iV5W9uYEdYUVa79Axb7Rh%1301WleyT98MSxVHPZCA6M"
       const { data } = await axios.get(`https://api.spotify.com/v1/tracks?ids=${trackids}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         }
       });
-      console.log(data.tracks)
+      // console.log(data.tracks)
+
+      const testarray = data.tracks
+      console.log(testarray)
+      // console.log(data.tracks[0])
+      // console.log(data.tracks[1])
+      // console.log(data.tracks[2])
+      // console.log(data.tracks[2])
+      // console.log(data.tracks[0].album)
       data.tracks.forEach(item => {
         // console.log(item.name)
         // console.log(item.id)
       });
 
-      setArtists(data.tracks.name);
+      setArtists(data.tracks);
     };
 
 
@@ -48,7 +60,7 @@ const Loadsongs = () => {
 
   }, []);
 
-  const [tracks, setArtists] = useState([]);
+
 
 
 
@@ -56,9 +68,10 @@ const Loadsongs = () => {
 
   const renderSongs = () => {
 
-    return tracks.map((track) => (
-      <div key={track.id}>
-        hello {track}
+    return tracksarray.map((artist) => (
+      <div key={artist}>
+        hello {artist.album.id}
+        hello {artist.album.name}
       </div>
     ));
 
