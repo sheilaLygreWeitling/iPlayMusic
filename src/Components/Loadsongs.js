@@ -25,7 +25,7 @@ const Loadsongs = () => {
 
   const [artists, setArtists] = useState([]);
 
-  const LoadSongs = async (e) => {
+  const InitialSongs = async (e) => {
     // e.preventDefault();
     // ed sheeran
     // https://api.spotify.com/v1/track/2UN0lp72LAusrXi8LLVomt
@@ -59,7 +59,7 @@ const Loadsongs = () => {
     ));
   };
 
-  LoadSongs();
+  InitialSongs();
 
   return (
     <header className="App-header">
