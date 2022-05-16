@@ -1,7 +1,7 @@
 const Page1 = () => {
 
   return (
-    <div>Page1</div>
+    <div className="bg-white dark:bg-darkPurple">Page1</div>
   )
 }
 
