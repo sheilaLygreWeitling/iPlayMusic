@@ -21,13 +21,13 @@ const QuotesComponent = () => {
         
         return ( 
             <article className="w-[80%]">
-            { data && console.log(data.MusicQuotes) }
-            {/* <h1 className="text-center font-bold text-headers4 my-[1rem] dark:text-white">
-                { data && data.MusicQuotes[1].title }
-            </h1>
-            <p className="text-center text-normal dark:text-white">
-                { data && data.MusicQuotes[1].paragraph }
-            </p> */}
+            {/*     { data && console.log(data.MusicQuotes) }
+                <h1 className="text-center font-bold text-headers4 my-[1rem] px-[2rem] dark:text-white">
+                    { data && data.MusicQuotes[1].title }
+                </h1>
+                <p className="text-center text-normal dark:text-white">
+                    { data && data.MusicQuotes[1].paragraph }
+                </p> */}
         </article>
      );
     }
