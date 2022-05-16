@@ -1,22 +1,26 @@
+import { Routes, Route } from "react-router-dom"
 import HomePage from "./pages/HomePage";
 
-import { Routes, Route } from "react-router-dom";
-
-
-import Page1 from "./pages/Page1";
 import MusicPlayer from "./pages/MusicPlayer";
+
+//import NowPlaying from "./pages/Heading/NowPlaying";
+
+
+
 
 
 function App() {
   return (
-    <div className="dark overflow-hidden ">
-      <div>navbar</div>
+
+    <div className="w-full h-screen overflow-hidden bg-white dark:bg-darkPurple">
 
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/Page1" element={<Page1 />} />
-        <Route path="/NowPlaying" element={<MusicPlayer />} />
+
+        <Route path="NowPlaying" element={<NowPlaying />} />
+
       </Routes>
+
     </div>
   );
 }

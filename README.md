@@ -15,6 +15,7 @@
 
 ## noter
 
+https://github.com/sheilaLygreWeitling/iPlayMusic
 husk Featured (index) skal senere integrere lazyload
 MVP:
   hent playliste / afspille musik, byg videre derfra
