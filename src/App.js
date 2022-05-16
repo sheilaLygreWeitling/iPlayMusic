@@ -1,9 +1,8 @@
 
 import { Routes, Route } from "react-router-dom";
-import AllSongs from "./pages/AllSongs";
 import HomePage from "./pages/HomePage";
+import AllSongs from "./pages/AllSongs";
 import MusicPlayer from "./pages/MusicPlayer";
-
 
 
 function App() {
