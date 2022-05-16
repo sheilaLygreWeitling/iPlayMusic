@@ -3,7 +3,7 @@ import axios from "axios";
 
 const Loadsongs = () => {
   const [token, setToken] = useState("");
-
+  const [artists, setArtists] = useState([]);
   useEffect(() => {
     const hash = window.location.hash;
     let token = window.localStorage.getItem("token");
@@ -22,13 +22,10 @@ const Loadsongs = () => {
     setToken(token);
 
     if (token) {
+      // console.log(artists)
+
       const InitialSongs = async (e) => {
         // e.preventDefault();
-        // ed sheeran
-        // https://api.spotify.com/v1/track/2UN0lp72LAusrXi8LLVomt
-        // spotify example
-        // https://api.spotify.com/v1/tracks/2KrxsD86ARO5beq7Q0Drfqa
-        // https://api.spotify.com/v1/search?query=Testshot&type=artist&locale=da-DK%2Cda%3Bq%3D0.9%2Cen-US%3Bq%3D0.8%2Cen%3Bq%3D0.7&offset=0&limit=20
         const { data } = await axios.get(
           "https://api.spotify.com/v1/search?query=Testshot&type=artist&locale=da-DK%2Cda%3Bq%3D0.9%2Cen-US%3Bq%3D0.8%2Cen%3Bq%3D0.7&offset=0&limit=20",
           {
@@ -40,17 +37,12 @@ const Loadsongs = () => {
             },
           }
         );
-
         console.log(data);
-
         setArtists(data.artists.items);
       };
-
       InitialSongs();
     }
   }, []);
-
-  const [artists, setArtists] = useState([]);
 
   const renderSongs = () => {
     return artists.map((artist) => (
