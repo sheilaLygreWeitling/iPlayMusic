@@ -73,6 +73,8 @@ const Loadsongs = () => {
         hello {artist.album.id}
         hello {artist.album.name}
         hello {artist.preview_url}
+
+        <img src={artist.album.images[0].url} />
       </div>
     ));
 
