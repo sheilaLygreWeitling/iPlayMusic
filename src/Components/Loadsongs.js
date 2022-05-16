@@ -48,7 +48,6 @@ const Loadsongs = () => {
 
       InitialSongs();
     }
-
   }, []);
 
   const [artists, setArtists] = useState([]);
