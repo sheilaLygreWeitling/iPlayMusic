@@ -1,7 +1,8 @@
 import React from 'react'
 
-const Details = (props) => {
 
+const Details = (props) => {
+    console.log(props.img);
     return (
         <div>
             <div className="details-img">
