@@ -70,10 +70,9 @@ const Loadsongs = () => {
     // see console log for more
     return tracksarray.map((artist) => (
       <div key={artist}>
-        hello {artist.album.id}
-        hello {artist.album.name}
-        hello {artist.preview_url}
-
+        {artist.album.id} <br />
+        {artist.album.name} <br />
+        {artist.preview_url} <br />
         <img src={artist.album.images[0].url} />
       </div>
     ));
