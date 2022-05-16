@@ -2,13 +2,9 @@ import HomePage from "./pages/HomePage";
 
 import { Routes, Route } from "react-router-dom";
 
-import NowPlaying from "./pages/Heading/NowPlaying";
-
-
-
-
 
 import Page1 from "./pages/Page1";
+import MusicPlayer from "./pages/MusicPlayer";
 
 
 function App() {
@@ -19,7 +15,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/Page1" element={<Page1 />} />
-        <Route path="NowPlaying" element={<NowPlaying />} />
+        <Route path="/NowPlaying" element={<MusicPlayer />} />
       </Routes>
     </div>
   );
