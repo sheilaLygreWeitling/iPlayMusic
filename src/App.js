@@ -12,7 +12,7 @@ function App() {
 
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/allsongs" element={<AllSongs/>} />
+          <Route path="/allsongs" element={<AllSongs/>} />
         <Route path="NowPlaying" element={<MusicPlayer />} />
       </Routes>
 

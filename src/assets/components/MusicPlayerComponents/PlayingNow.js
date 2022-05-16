@@ -5,7 +5,7 @@ const songs = [
     {
         title: "A Horse with No Name",
         artist: "Panic! at the Disco",
-        img_src: "./assets/images/darthVader.jpg",
+        img_src: "./music/darthVader.jpg",
         src: "./music/aHorseWithNoName.mp3",
     },
     {
@@ -25,9 +25,9 @@ const songs = [
     }
 ]
 
+
+
 const PlayingNow = (props) => {
-
-
     const [currentSongIndex, setCurrentSongIndex] = useState(0);
     const [nextSongIndex, setNextSongIndex] = useState(0);
 
