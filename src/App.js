@@ -3,7 +3,6 @@ import HomePage from "./pages/HomePage";
 
 import MusicPlayer from "./pages/MusicPlayer";
 
-//import NowPlaying from "./pages/Heading/NowPlaying";
 
 
 
@@ -17,7 +16,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
 
-        <Route path="NowPlaying" element={<NowPlaying />} />
+        <Route path="NowPlaying" element={<MusicPlayer />} />
 
       </Routes>
 
