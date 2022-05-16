@@ -26,13 +26,8 @@ const Loadsongs = () => {
 
     if (token) {
       const InitialSongs = async () => {
-        // https://api.spotify.com/v1/me/tracks?limit=50
-        // prøv SPOTIFY me tracks
-
-        // song tss flight proven 6pvqBIceXlX3zC09vqHOEo
-
-        var trackids = "7ouMYWpwJ422jRcDASZB7P%2C4VqPOruhp5EdPBeR92t6lQ%2C2takcwOaAZWiXQijPHIx7B"
-        // var trackids = "4iV5W9uYEdYUVa79Axb7Rh%1301WleyT98MSxVHPZCA6M"
+        // between each song, add "%2C"
+        var trackids = "7ouMYWpwJ422jRcDASZB7P%2C4VqPOruhp5EdPBeR92t6lQ%2C2takcwOaAZWiXQijPHIx7B%2C6pvqBIceXlX3zC09vqHOEo%2C2iblMMIgSznA464mNov7A8%2C4iV5W9uYEdYUVa79Axb7Rh%2C1301WleyT98MSxVHPZCA6M"
         const { data } = await axios.get(`https://api.spotify.com/v1/tracks?ids=${trackids}`, {
           headers: {
             Authorization: `Bearer ${token}`,
