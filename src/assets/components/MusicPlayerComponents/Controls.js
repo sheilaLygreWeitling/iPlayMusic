@@ -6,7 +6,7 @@ const Controls = (props) => {
 
     return (
         <div>
-            <div className="flex gap-[20px]">
+            <div className="flex justify-center gap-[20px]">
                 <button className='musicPlayer-btn skipBackward-btn text-white' onClick={() => props.SkipSong(false)} >
                     <AiFillStepBackward />
                 </button>

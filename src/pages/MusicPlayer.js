@@ -10,13 +10,13 @@ const MusicPlayer = () => {
     return (
         <div>
             <div className='flex justify-center gap-[115px] m-4'>
-                <div>
+                <div className='text-white'>
                     <ArrowBack />
                 </div>
-                <div>
+                <div className='text-white'>
                     <Playing />
                 </div>
-                <div>
+                <div className='text-white'>
                     <Search />
                 </div>
             </div>
