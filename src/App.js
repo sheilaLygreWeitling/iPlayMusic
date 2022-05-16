@@ -2,7 +2,11 @@ import { Routes, Route } from "react-router-dom";
 import AllSongs from "./pages/AllSongs";
 /* import Home from "./pages/Home"; */
 import HomePage from "./pages/HomePage";
-import NowPlaying from "./pages/Heading/NowPlaying";
+
+import MusicPlayer from "./pages/MusicPlayer";
+
+//import NowPlaying from "./pages/Heading/NowPlaying";
+
 
 function App() {
   return (
@@ -11,8 +15,9 @@ function App() {
 
       <Routes>
         <Route path="/" element={<HomePage />} />
-        {/* <Route path="/Page1" element={} /> */}
+
         <Route path="NowPlaying" element={<NowPlaying />} />
+
       </Routes>
 
     </div>
