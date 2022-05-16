@@ -1,19 +1,13 @@
-import PlayIcon from "../assets/img/SVG/PlayIcon";
-
+import Songs from "../assets/components/allsongs/Songs";
 
 const AllSongs = () => {
   return (
     <>
-      <h1>All Songs</h1>
-      <section>
-        <article>
-          <PlayIcon />
-          <div>
-            <h2>Old Town Road</h2>
-            <h3>Billy Ray Cyrus</h3>
-            <p>3:58</p>
-          </div>
-        </article>
+      <h1 className="text-[48px] w-screen">All Songs</h1>
+      <section className="flex flex-col">
+        <Songs/>
+        <Songs/>
+        <Songs/>
       </section>
     </>
   );
