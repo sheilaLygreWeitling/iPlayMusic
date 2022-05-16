@@ -2,6 +2,7 @@ module.exports = {
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
+  darkMode: 'class',
   theme: {
     extend: {
       colors:{
@@ -28,8 +29,19 @@ module.exports = {
         'gradientRedFrom': '#EE0979',
         'gradientRedTo': '#FF6A00',
         
-        'reallyBlack': '#111111'
+        'reallyBlack': '#111111',
       },
+      fontSize:{
+        'headers1': '48px',
+        'headers2': '36px',
+        'headers3': '32px',
+        'headers4': '24px',
+        'headers5': '20px',
+        'headers6': '15px',
+        'normal': '15px',
+        'small': '12px',
+        'xsmall': '10px',
+      }
     },
   },
   plugins: [],

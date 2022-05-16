@@ -7,3 +7,17 @@
 body{
     font-family: 'Poppins', sans-serif;
 }
+
+@layer components {
+    .input-primary {
+      @apply 
+      border-4 
+      border-black 
+      dark:border-white 
+      rounded-full 
+      p-[1rem] flex 
+      justify-center 
+      items-center
+    }
+
+}
