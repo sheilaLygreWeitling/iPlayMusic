@@ -1,11 +1,8 @@
-import { Routes, Route } from "react-router-dom"
+
+import { Routes, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage";
-
+import AllSongs from "./pages/AllSongs";
 import MusicPlayer from "./pages/MusicPlayer";
-
-
-
-
 
 
 function App() {
@@ -15,9 +12,8 @@ function App() {
 
       <Routes>
         <Route path="/" element={<HomePage />} />
-
+          <Route path="/allsongs" element={<AllSongs/>} />
         <Route path="NowPlaying" element={<MusicPlayer />} />
-
       </Routes>
 
     </div>

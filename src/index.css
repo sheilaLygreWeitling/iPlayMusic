@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,700;1,100&display=swap');
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
 @layer components {
     .input-primary {
       @apply 
@@ -14,6 +20,3 @@
       items-center
     }
 }
-
-/*MUSICPLAYER CSS*/
-
