@@ -1,12 +1,11 @@
-import { Routes, Route } from "react-router-dom"
+import { Routes, Route } from "react-router-dom";
+import AllSongs from "./pages/AllSongs";
+/* import Home from "./pages/Home"; */
 import HomePage from "./pages/HomePage";
 
 import MusicPlayer from "./pages/MusicPlayer";
 
 //import NowPlaying from "./pages/Heading/NowPlaying";
-
-
-
 
 
 function App() {
