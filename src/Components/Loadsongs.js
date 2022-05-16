@@ -24,8 +24,6 @@ const Loadsongs = () => {
 
     setToken(token);
 
-
-
     const InitialSongs = async () => {
       // https://api.spotify.com/v1/me/tracks?limit=50
       // prøv SPOTIFY me tracks
@@ -59,12 +57,6 @@ const Loadsongs = () => {
 
   }, []);
 
-
-
-
-
-
-
   const renderSongs = () => {
 
     // see console log for more
@@ -76,16 +68,7 @@ const Loadsongs = () => {
         <img src={artist.album.images[0].url} />
       </div>
     ));
-
-    return (
-      <div>
-        helllllllo
-      </div>
-    )
-
   };
-
-
 
   return (
     <header className="App-header">
