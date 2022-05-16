@@ -29,7 +29,7 @@ module.exports = {
         'gradientRedFrom': '#EE0979',
         'gradientRedTo': '#FF6A00',
         
-        'reallyBlack': '#111111'
+        'reallyBlack': '#111111',
       },
       fontSize:{
         'headers1': '48px',

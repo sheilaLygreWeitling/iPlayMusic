@@ -1,20 +1,18 @@
-import HomePage from "./pages/HomePage";
-
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom"
 import HomePage from "./pages/HomePage";
 import Page1 from "./pages/Page1";
 import Page2 from "./pages/Page2";
+//import { ThemeProvider } from "../assets/components/context/ThemeContext"
+
 
 function App() {
   return (
-    <div className="dark overflow-hidden ">
-      <div>navbar</div>
-
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/Page1" element={<Page1 />} />
-        <Route path="/Page2" element={<Page2 />} />
-      </Routes>
+    <div className="w-full h-screen overflow-hidden bg-white dark:bg-darkPurple">
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/AllSongs" element={<Page1 />} />
+          <Route path="/NowPlaying" element={<Page2 />} />
+        </Routes>
     </div>
   );
 }
