@@ -1,19 +1,8 @@
-<<<<<<< HEAD
+
 import { Routes, Route } from "react-router-dom";
 import AllSongs from "./pages/AllSongs";
-import Home from "./pages/Home";
-
-function App() {
-  return (
-    <>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/allsongs" element={<AllSongs/>} />
-=======
-import { Routes, Route } from "react-router-dom"
 import HomePage from "./pages/HomePage";
-import NowPlaying from "./pages/Heading/NowPlaying";
-
+import MusicPlayer from "./pages/MusicPlayer";
 
 
 
@@ -24,9 +13,8 @@ function App() {
 
       <Routes>
         <Route path="/" element={<HomePage />} />
-        {/* <Route path="/Page1" element={} /> */}
-        <Route path="NowPlaying" element={<NowPlaying />} />
->>>>>>> 5b8b2f7c2c3debc11e1d215bccb966a36361e119
+        <Route path="/allsongs" element={<AllSongs/>} />
+        <Route path="NowPlaying" element={<MusicPlayer />} />
       </Routes>
 
     </div>
