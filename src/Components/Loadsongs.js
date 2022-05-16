@@ -28,28 +28,28 @@ const Loadsongs = () => {
       // https://api.spotify.com/v1/me/tracks?limit=50
       // prøv SPOTIFY me tracks
 
-      var trackids = "7ouMYWpwJ422jRcDASZB7P%2C4VqPOruhp5EdPBeR92t6lQ%2C2takcwOaAZWiXQijPHIx7B"
-      // var trackids = "4iV5W9uYEdYUVa79Axb7Rh%1301WleyT98MSxVHPZCA6M"
-      const { data } = await axios.get(`https://api.spotify.com/v1/tracks?ids=${trackids}`, {
+      var albumids = "382ObEPsp2rxGrnsizN5TX,1A2GTWGtFfWp7KSQTwWOyo,2noRn2Aes5aoNVsU6iWThc,4aawyAB9vmqN3uQ7FjRGTy"
+      // https://api.spotify.com/v1/albums/{id}
+      const { data } = await axios.get(`https://api.spotify.com/v1/albums?ids=${albumids}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         }
       });
       // console.log(data.tracks)
 
-      const testarray = data.tracks
+      const testarray = data.albums
       console.log(testarray)
       // console.log(data.tracks[0])
       // console.log(data.tracks[1])
       // console.log(data.tracks[2])
       // console.log(data.tracks[2])
       // console.log(data.tracks[0].album)
-      data.tracks.forEach(item => {
+      // data.tracks.forEach(item => {
         // console.log(item.name)
         // console.log(item.id)
-      });
+      // });
 
-      setArtists(data.tracks);
+      setArtists(data.albums);
     };
 
 
@@ -60,12 +60,12 @@ const Loadsongs = () => {
   const renderSongs = () => {
 
     // see console log for more
-    return tracksarray.map((artist, index) => (
+    return tracksarray.map((albums, index) => (
       <div key={index}>
-        {artist.album.id} <br />
-        {artist.album.name} <br />
-        {artist.preview_url} <br />
-        <img src={artist.album.images[0].url} />
+        {albums.id} <br />
+        {albums.name} <br />
+        {albums.preview_url} <br />
+        <img src={albums.images[0].url} />
       </div>
     ));
   };
