@@ -2,8 +2,10 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 
 const Loadsongs = () => {
+
   const [token, setToken] = useState("");
   const [artists, setArtists] = useState([]);
+
   useEffect(() => {
     const hash = window.location.hash;
     let token = window.localStorage.getItem("token");
@@ -22,8 +24,6 @@ const Loadsongs = () => {
     setToken(token);
 
     if (token) {
-      // console.log(artists)
-
       const InitialSongs = async (e) => {
         // e.preventDefault();
         const { data } = await axios.get(
@@ -37,7 +37,7 @@ const Loadsongs = () => {
             },
           }
         );
-        console.log(data);
+        // console.log(data);
         setArtists(data.artists.items);
       };
       InitialSongs();
