@@ -3,8 +3,7 @@ import axios from "axios";
 
 const Searchcomp = () => {
   const [token, setToken] = useState("");
-  // setTracksarray
-  const [tracksarray, setArtists] = useState([]);
+  const [tracksarray, setTracksArray] = useState([]);
 
   useEffect(() => {
     const hash = window.location.hash;
@@ -43,7 +42,7 @@ const Searchcomp = () => {
         //   console.log(item.name)
         //   console.log(item.id)
         // });
-        setArtists(data.tracks);
+        setTracksArray(data.tracks);
       };
 
       InitialSongs();
@@ -69,7 +68,7 @@ const Searchcomp = () => {
         type: "artist",
       },
     });
-    setArtists(data.artists.items);
+    setTracksArray(data.artists.items);
     console.log(tracksarray)
     console.log(tracksarray[0])
     console.log(tracksarray[0].preview_url)
