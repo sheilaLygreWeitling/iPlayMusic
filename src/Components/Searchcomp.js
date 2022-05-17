@@ -3,6 +3,7 @@ import axios from "axios";
 
 const Searchcomp = () => {
   const [token, setToken] = useState("");
+  // setTracksarray
   const [tracksarray, setArtists] = useState([]);
 
   useEffect(() => {
