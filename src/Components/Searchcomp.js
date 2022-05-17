@@ -52,7 +52,7 @@ const Searchcomp = () => {
   const REDIRECT_URI = "http://localhost:3000/Search";
   const RESPONSE_TYPE = "token";
 
-  const renderArtists = () => {
+  const renderSongs = () => {
     return tracksarray.map((artist) => (
       <div key={artist.id}>
         {artist.images.length ? (
@@ -88,7 +88,7 @@ const Searchcomp = () => {
         <div>search page content</div>
       )}
 
-      {renderArtists()}
+      {renderSongs()}
 
     </header>
   );
