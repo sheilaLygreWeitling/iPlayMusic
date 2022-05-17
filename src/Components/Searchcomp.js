@@ -3,6 +3,7 @@ import axios from "axios";
 
 const Searchcomp = () => {
   const [token, setToken] = useState("");
+  const [tracksarray, setArtists] = useState([]);
 
   useEffect(() => {
     const hash = window.location.hash;
@@ -28,7 +29,6 @@ const Searchcomp = () => {
   };
 
   const [searchKey, setSearchKey] = useState("");
-  const [tracksarray, setArtists] = useState([]);
 
   const searchArtists = async (e) => {
     e.preventDefault();
