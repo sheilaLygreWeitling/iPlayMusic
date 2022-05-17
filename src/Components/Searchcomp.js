@@ -69,9 +69,9 @@ const Searchcomp = () => {
       },
     });
     setTracksArray(data.artists.items);
-    console.log(tracksarray)
-    console.log(tracksarray[0])
-    console.log(tracksarray[0].preview_url)
+    // console.log(tracksarray)
+    // console.log(tracksarray[0])
+    // console.log(tracksarray[0].preview_url)
   };
 
   // https://accounts.spotify.com/da-DK/authorize?
