@@ -2,11 +2,18 @@
 import React, { useState, useRef, useEffect } from 'react'
 import Details from './Details'
 import Controls from './Controls'
+import ProgressBar from './ProgressBar'
 
 const Player = (props) => {
     console.log(props.songs[props.currentSongIndex].src)
     const audioElement = useRef(null);
+    useEffect(() => {
+        if (audioElement && audioElement.current) {
+            console.log(audioElement.current.duration)
+        }
+    }, [audioElement])
     const [isPlaying, setIsPlaying] = useState(false);
+    const [duration, setDuration] = useState(0);
 
     useEffect(() => {
         if (isPlaying) {
@@ -15,6 +22,10 @@ const Player = (props) => {
             audioElement.current.pause();
         }
     });
+
+    const handleOnLoad = () => {
+        setDuration(audioElement.current.duration);
+    }
 
     const SkipSong = (forwards = true) => {
         if (forwards) {
@@ -41,18 +52,17 @@ const Player = (props) => {
             });
         }
     }
+
+
+
+
     return (
         <div>
-            <div>
-
-                <div className="c-player">
-                    <audio src={props.songs[props.currentSongIndex].src} ref={audioElement} ></audio>
-
-                    <Details songs={props.songs} img={props.songs[props.currentSongIndex].img_src} title={props.songs[props.currentSongIndex].title} artist={props.songs[props.currentSongIndex].artist} />
-                    <Controls isPlaying={isPlaying} setIsPlaying={setIsPlaying} SkipSong={SkipSong} />
-
-                </div>
-
+            <div className="c-player">
+                <audio src={props.songs[props.currentSongIndex].src} ref={audioElement} onLoadedMetadata={handleOnLoad}></audio>
+                <Details songs={props.songs} img={props.songs[props.currentSongIndex].img_src} title={props.songs[props.currentSongIndex].title} artist={props.songs[props.currentSongIndex].artist} />
+                <ProgressBar duration={duration} />
+                <Controls isPlaying={isPlaying} setIsPlaying={setIsPlaying} SkipSong={SkipSong} />
             </div>
         </div>
     )
