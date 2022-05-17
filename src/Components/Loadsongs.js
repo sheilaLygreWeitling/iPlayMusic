@@ -57,6 +57,8 @@ const Loadsongs = () => {
     ));
   };
 
+
+  // artists.length
   return (
     <header className="App-header">
       <h1>Load songs</h1>
