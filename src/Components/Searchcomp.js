@@ -55,7 +55,6 @@ const Searchcomp = () => {
   const renderSongs = () => {
     return tracksarray.map((item, index) => (
       <div key={index} data-id={item.id}>
-        {item.id}
         {item.images.length ? (
           <img width={"100%"} src={item.images[0].url} />
         ) : (
