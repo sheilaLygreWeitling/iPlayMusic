@@ -11,9 +11,11 @@
 
 - https://github.com/rts-cmk-opgaver/IPlayMusic
 - kun til mobilen
+- spotify API
 
 ## noter
 
+https://github.com/sheilaLygreWeitling/iPlayMusic
 husk Featured (index) skal senere integrere lazyload
 MVP:
   hent playliste / afspille musik, byg videre derfra
