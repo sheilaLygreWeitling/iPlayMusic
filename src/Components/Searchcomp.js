@@ -83,8 +83,8 @@ const Searchcomp = () => {
       </form>
 
       {/*
-      searchSongs1
-      searchSongs2
+      {searchSongs()}
+      {initialSongs()}
       */}
       {tracksarray.length <= 0 ? (
         <div>initial fetch</div>
