@@ -21,6 +21,33 @@ const Searchcomp = () => {
     }
 
     setToken(token);
+
+    if (token) {
+      const InitialSongs = async () => {
+        // between each song, add "%2C"
+        var trackids =
+          "7ouMYWpwJ422jRcDASZB7P%2C4VqPOruhp5EdPBeR92t6lQ%2C2takcwOaAZWiXQijPHIx7B%2C6pvqBIceXlX3zC09vqHOEo%2C2iblMMIgSznA464mNov7A8%2C4iV5W9uYEdYUVa79Axb7Rh%2C1301WleyT98MSxVHPZCA6M";
+        const { data } = await axios.get(
+          `https://api.spotify.com/v1/tracks?ids=${trackids}`,
+          {
+            headers: {
+              Authorization: `Bearer ${token}`,
+            },
+          }
+        );
+        // console.log(data.tracks)
+        // console.log(data.tracks[0])
+        // console.log(data.tracks[0].album)
+        // data.tracks.forEach((item) => {
+        //   console.log(item.name)
+        //   console.log(item.id)
+        // });
+        setArtists(data.tracks);
+      };
+
+      InitialSongs();
+    }
+
   }, []);
 
   const logout = () => {
@@ -41,8 +68,10 @@ const Searchcomp = () => {
         type: "artist",
       },
     });
-    console.log(data.artists.items)
     setArtists(data.artists.items);
+    console.log(tracksarray)
+    console.log(tracksarray[0])
+    console.log(tracksarray[0].preview_url)
   };
 
   // https://accounts.spotify.com/da-DK/authorize?
@@ -52,14 +81,24 @@ const Searchcomp = () => {
   const REDIRECT_URI = "http://localhost:3000/Search";
   const RESPONSE_TYPE = "token";
 
+  const initialSongs = () => {
+    return tracksarray.map((item, index) => (
+      <div key={index} data-id={item.album.id}>
+        {item.album.name} <br />
+        {item.preview_url} <br />
+        <img src={item.album.images[0].url} />
+      </div>
+    ));
+  };
+
   const searchSongs = () => {
     return tracksarray.map((item, index) => (
       <div key={index} data-id={item.id}>
-        {item.images.length ? (
-          <img width={"100%"} src={item.images[0].url} />
-        ) : (
+        {/* {item.images.length ? ( */}
+          {/* <img width={"100%"} src={item.images[0].url} /> */}
+        {/* ) : (
           <div>No Image</div>
-        )}
+        )} */}
         {item.name}
       </div>
     ));
@@ -82,17 +121,11 @@ const Searchcomp = () => {
         <button type={"submit"}>Search</button>
       </form>
 
-      {/*
-      {searchSongs()}
-      {initialSongs()}
-      */}
       {tracksarray.length <= 0 ? (
-        <div>initial fetch</div>
+        <div>{initialSongs()}</div>
       ) : (
-        <div>search fetch</div>
+        <div>{searchSongs()}</div>
       )}
-
-      {searchSongs()}
     </header>
   );
 }
