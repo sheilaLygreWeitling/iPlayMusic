@@ -75,7 +75,11 @@ const Loadsongs = () => {
     <header className="App-header">
       <h1>Load songs</h1>
 
-      {!token ? <div>normal page content</div> : <div>search page content</div>}
+      {!token ? (
+        <div>normal page content</div>
+      ) : (
+        <div>search page content</div>
+      )}
 
       {renderSongs()}
     </header>

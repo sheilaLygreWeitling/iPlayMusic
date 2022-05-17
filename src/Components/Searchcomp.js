@@ -82,6 +82,7 @@ const Searchcomp = () => {
         <input type="text" onChange={(e) => setSearchKey(e.target.value)} />
         <button type={"submit"}>Search</button>
       </form>
+
       {!token ? (
         <div>normal page content</div>
       ) : (
@@ -89,7 +90,6 @@ const Searchcomp = () => {
       )}
 
       {renderSongs()}
-
     </header>
   );
 }
