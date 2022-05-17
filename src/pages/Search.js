@@ -4,11 +4,8 @@ import Loadsongs from "../Components/Loadsongs"
 const Search = () => {
   return (
     <div>
-
       <Searchcomp />
-
       <Loadsongs />
-
     </div>
   )
 };
