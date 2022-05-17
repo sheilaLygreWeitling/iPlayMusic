@@ -51,7 +51,7 @@ const Loadsongs = () => {
 
   const renderSongs = () => {
     return tracksarray.map((item, index) => (
-      <div key={index}>
+      <div key={index} data-id={item.album.id}>
         {item.album.id} <br />
         {item.album.name} <br />
         {item.preview_url} <br />
