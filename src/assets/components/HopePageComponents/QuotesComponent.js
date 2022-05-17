@@ -1,48 +1,34 @@
 import { useEffect, useState } from "react";
+import quotes from "../../data/quotes";
+import { motion } from 'framer-motion'
+
 
 const QuotesComponent = () => {
-    const [ data, setData ] = useState([]);
-    
-    
-    const fetchData=()=>{
-        fetch('./IntroQuotes.json')
-        .then(response => {
-            return response.json()
-          })
-          .then(fetchData => {
-            setData(fetchData)
-            //console.log(data);
-          })
-      }
-      
-      useEffect(()=>{
-          fetchData()
-        },[])
-        
-        return ( 
-            <article className="w-[80%]">
-            {/*     { data && console.log(data.MusicQuotes) }
-                <h1 className="text-center font-bold text-headers4 my-[1rem] px-[2rem] dark:text-white">
-                    { data && data.MusicQuotes[1].title }
-                </h1>
-                <p className="text-center text-normal dark:text-white">
-                    { data && data.MusicQuotes[1].paragraph }
-                </p> */}
-        </article>
-     );
+    const [ randomNumber, setRandomNumber ] = useState(0);
+
+    const randomNum = (max) => {
+        return Math.floor(Math.random() * max);
     }
     
-    export default QuotesComponent;
+    useEffect(()=>{
+        const interval = setInterval(() => {
+            let randomNr = randomNum(quotes.length)
+            setRandomNumber(randomNr);
+        }, 8000);
+        return () => clearInterval(interval);
+    }, []);
     
+    return ( 
+        <article className="w-[80%] h-[20rem] dark:text-white">
+            <h1 className="text-center font-bold text-headers4 my-[1rem] px-[2rem]">
+                { quotes[randomNumber].title}
+            </h1>
+            <p className="text-center text-normal">
+                { quotes[randomNumber].paragraph}
+            </p>
+        </article>
+    );
+}
+
     
-    
-    /* const getData = () => {
-        fetch("./assets/json/IntroQuotes.json")
-        .then((res) => res.json())
-        .then((json) => {
-            this.setState({
-                items: json,
-                DataisLoaded: true
-            });
-        })
-    } */
+export default QuotesComponent;
