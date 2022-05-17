@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 
 const Searchcomp = () => {
-
   const [token, setToken] = useState("");
 
   useEffect(() => {

@@ -5,8 +5,10 @@ const Search = () => {
   return (
     <div>
 
-      <Searchcomp />
+      {/* Login */}
+      {/* FetchSongs */}
 
+      <Searchcomp />
       <Loadsongs />
 
     </div>
