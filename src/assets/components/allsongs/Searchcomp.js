@@ -84,9 +84,9 @@ const Searchcomp = () => {
   const initialSongs = () => {
     return tracksarray.map((item, index) => (
       <div key={index} data-id={item.album.id}>
-        {item.album.name} <br />
+        {/* {item.album.name} <br />
         {item.preview_url} <br />
-        <img src={item.album.images[0].url} />
+        <img src={item.album.images[0].url} /> */}
       </div>
     ));
   };
