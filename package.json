@@ -11,10 +11,7 @@
     "react-carousel-light": "^0.2.2",
     "react-dom": "^18.1.0",
     "react-icons": "^4.3.1",
-<<<<<<< HEAD
     "react-native-section-alphabet-list": "^2.1.0",
-=======
->>>>>>> 5b8b2f7c2c3debc11e1d215bccb966a36361e119
     "react-router": "^6.3.0",
     "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",
