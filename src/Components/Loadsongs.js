@@ -32,10 +32,7 @@ const Loadsongs = () => {
           {
             headers: {
               Authorization: `Bearer ${token}`,
-              // "Access-Control-Allow-Origin": `*`
             },
-            // withCredentials: true,
-            // credentials: 'same-origin'
           }
         );
         // console.log(data.tracks)
