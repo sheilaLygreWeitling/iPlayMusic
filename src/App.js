@@ -7,7 +7,7 @@ import Searchcomp from "./assets/components/allsongs/Searchcomp";
 function App() {
   return (
 
-    <div className="w-full h-screen overflow-hidden bg-white dark:bg-darkPurple">
+    <div className="w-full h-screen overflow-hidden bg-white dark:bg-darkPurple dark:text-white">
 
       <Routes>
         <Route path="/" element={<HomePage />} />
