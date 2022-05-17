@@ -28,7 +28,7 @@ const Searchcomp = () => {
   };
 
   const [searchKey, setSearchKey] = useState("");
-  const [artists, setArtists] = useState([]);
+  const [tracksarray, setArtists] = useState([]);
 
   const searchArtists = async (e) => {
     e.preventDefault();
@@ -42,7 +42,6 @@ const Searchcomp = () => {
       },
     });
 
-    // console.log(data.artists)
     setArtists(data.artists.items);
   };
 
@@ -54,7 +53,7 @@ const Searchcomp = () => {
   const RESPONSE_TYPE = "token";
 
   const renderArtists = () => {
-    return artists.map((artist) => (
+    return tracksarray.map((artist) => (
       <div key={artist.id}>
         {artist.images.length ? (
           <img width={"100%"} src={artist.images[0].url} />
