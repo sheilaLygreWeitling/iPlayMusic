@@ -52,7 +52,7 @@ const Searchcomp = () => {
   const REDIRECT_URI = "http://localhost:3000/Search";
   const RESPONSE_TYPE = "token";
 
-  const renderSongs = () => {
+  const searchSongs = () => {
     return tracksarray.map((item, index) => (
       <div key={index} data-id={item.id}>
         {item.images.length ? (
@@ -83,8 +83,8 @@ const Searchcomp = () => {
       </form>
 
       {/*
-      rendersongs1
-      rendersongs2
+      searchSongs1
+      searchSongs2
       */}
       {tracksarray.length <= 0 ? (
         <div>initial fetch</div>
@@ -92,7 +92,7 @@ const Searchcomp = () => {
         <div>search fetch</div>
       )}
 
-      {renderSongs()}
+      {searchSongs()}
     </header>
   );
 }

@@ -49,7 +49,7 @@ const Loadsongs = () => {
     }
   }, []);
 
-  const renderSongs = () => {
+  const initialSongs = () => {
     return tracksarray.map((item, index) => (
       <div key={index} data-id={item.album.id}>
         {item.album.name} <br />
@@ -67,7 +67,7 @@ const Loadsongs = () => {
         <div>search page content</div>
       )}
 
-      {renderSongs()}
+      {initialSongs()}
     </header>
   );
 };
