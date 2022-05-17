@@ -41,7 +41,7 @@ const Searchcomp = () => {
         type: "artist",
       },
     });
-
+    console.log(data.artists.items)
     setArtists(data.artists.items);
   };
 
@@ -53,14 +53,15 @@ const Searchcomp = () => {
   const RESPONSE_TYPE = "token";
 
   const renderSongs = () => {
-    return tracksarray.map((artist) => (
-      <div key={artist.id}>
-        {artist.images.length ? (
-          <img width={"100%"} src={artist.images[0].url} />
+    return tracksarray.map((item, index) => (
+      <div key={index}>
+        {item.id}
+        {item.images.length ? (
+          <img width={"100%"} src={item.images[0].url} />
         ) : (
           <div>No Image</div>
         )}
-        {artist.name}
+        {item.name}
       </div>
     ));
   };
@@ -82,10 +83,14 @@ const Searchcomp = () => {
         <button type={"submit"}>Search</button>
       </form>
 
-      {!token ? (
-        <div>normal page content</div>
+      {/*
+      rendersongs1
+      rendersongs2
+      */}
+      {tracksarray.length <= 0 ? (
+        <div>initial fetch</div>
       ) : (
-        <div>search page content</div>
+        <div>search fetch</div>
       )}
 
       {renderSongs()}

@@ -50,12 +50,12 @@ const Loadsongs = () => {
   }, []);
 
   const renderSongs = () => {
-    return tracksarray.map((artist, index) => (
+    return tracksarray.map((item, index) => (
       <div key={index}>
-        {artist.album.id} <br />
-        {artist.album.name} <br />
-        {artist.preview_url} <br />
-        <img src={artist.album.images[0].url} />
+        {item.album.id} <br />
+        {item.album.name} <br />
+        {item.preview_url} <br />
+        <img src={item.album.images[0].url} />
       </div>
     ));
   };
