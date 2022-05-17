@@ -37,4 +37,5 @@ npm i framer-motion
 npm i react-carousel-light
 npm i react-router
 npm i react-icons
-npm install react-icons --save
+npm i react-icons --save
+npm i axios
