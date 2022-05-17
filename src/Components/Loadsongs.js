@@ -39,19 +39,12 @@ const Loadsongs = () => {
           }
         );
         // console.log(data.tracks)
-
-        const testarray = data.tracks;
-        console.log(testarray);
         // console.log(data.tracks[0])
-        // console.log(data.tracks[1])
-        // console.log(data.tracks[2])
-        // console.log(data.tracks[2])
         // console.log(data.tracks[0].album)
-        data.tracks.forEach((item) => {
-          // console.log(item.name)
-          // console.log(item.id)
-        });
-
+        // data.tracks.forEach((item) => {
+        //   console.log(item.name)
+        //   console.log(item.id)
+        // });
         setArtists(data.tracks);
       };
 
@@ -60,7 +53,6 @@ const Loadsongs = () => {
   }, []);
 
   const renderSongs = () => {
-    // see console log for more
     return tracksarray.map((artist, index) => (
       <div key={index}>
         {artist.album.id} <br />
