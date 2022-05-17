@@ -2,7 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import AllSongs from "./pages/AllSongs";
 import MusicPlayer from "./pages/MusicPlayer";
-import Searchcomp from "../src/Components/Searchcomp";
+import Searchcomp from "./assets/components/allsongs/Searchcomp";
 
 function App() {
   return (

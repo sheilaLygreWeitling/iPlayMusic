@@ -1,4 +1,4 @@
-import Searchcomp from "../Components/Searchcomp"
+import Searchcomp from "../assets/components/allsongs/Searchcomp"
 
 const Search = () => {
   return (

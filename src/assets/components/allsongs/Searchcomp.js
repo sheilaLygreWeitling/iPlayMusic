@@ -94,12 +94,16 @@ const Searchcomp = () => {
   const searchSongs = () => {
     return tracksarray.map((item, index) => (
       <div key={index} data-id={item.id}>
+        <br /><br />
         {/* {item.images.length ? ( */}
           {/* <img width={"100%"} src={item.images[0].url} /> */}
         {/* ) : (
           <div>No Image</div>
         )} */}
-        {item.name}
+        {item.name} <br />
+        {item.preview_url}
+
+        <br /><br />
       </div>
     ));
   };
@@ -121,11 +125,7 @@ const Searchcomp = () => {
         <button type={"submit"}>Search</button>
       </form>
 
-      {tracksarray.length <= 0 ? (
-        <div>{initialSongs()}</div>
-      ) : (
-        <div>{searchSongs()}</div>
-      )}
+      {tracksarray.length <= 0 ? <div>{initialSongs()}</div> : <div>{searchSongs()}</div>}
     </header>
   );
 }
