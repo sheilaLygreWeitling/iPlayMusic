@@ -83,15 +83,15 @@ const Searchcomp = () => {
         return tracksarray.map((item, index) => (
             <div key={index}>
                 {/* {item.album.name} <br />
-        {item.preview_url} <br />
-        <img src={item.album.images[0].url} /> */}
+                {item.preview_url} <br />
+                <img src={item.album.images[0].url} /> */}
             </div>
         ));
     };
 
     const searchSongs = () => {
         return tracksarray.map((item, index) => (
-            <div key={index} data-id={item.id}>
+            <div key={index}>
                 <br />
                 <br />
                 {/* {item.images.length ? ( */}
@@ -99,15 +99,16 @@ const Searchcomp = () => {
                 {/* ) : (
           <div>No Image</div>
         )} */}
-                {item.name} <br />
+                {item.name}
+                <br />
                 {item.preview_url}
-                <br />
-                <br />
             </div>
         ));
     };
 
     var InitialLoading = true;
+    // var InitialLoading = new Boolean(true);
+
     return (
         <header className="App-header">
             {!token ? (
@@ -130,11 +131,11 @@ const Searchcomp = () => {
 
             {searchSongs()}
             {/* {tracksarray.length <= 0 ? <div>{initialSongs()}</div> : <div>{searchSongs()}</div>} */}
-            {/* {InitialLoading == false ? (
+            {InitialLoading == false ? (
                 <div>{initialSongs()}</div>
             ) : (
                 <div>{searchSongs()}</div>
-            )} */}
+            )}
         </header>
     );
 };
