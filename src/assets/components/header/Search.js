@@ -9,7 +9,7 @@ const Search = () => {
     return (
         <div>
             <div>
-                <button>{url === '/NowPlaying' ? "" : <AiOutlineSearch /> }</button> 
+                <button>{url === '/NowPlaying' ? "" : <AiOutlineSearch className='text-xl'/> }</button> 
             </div>
         </div>
     )

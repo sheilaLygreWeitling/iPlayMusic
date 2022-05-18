@@ -1,25 +1,13 @@
 import React from 'react'
-import PlayingNow from '../assets/components/MusicPlayerComponents/PlayingNow'
-import ArrowBack from '../assets/components/Heading/ArrowBack'
-import Playing from '../assets/components/Heading/Playing'
+import PlayingNow from '../assets/components/musicplayer/PlayingNow'
+import Header from '../assets/components/header/Header'
 
 const MusicPlayer = () => {
     return (
-        <div>
-                <nav className='flex justify-center gap-[115px] m-4'>
-                
-                    <ArrowBack />
-            
-                    <Playing /> 
-            
-                    <Search />
-                </nav>
-
-            <div>
-                <PlayingNow />
-            </div>
-
-        </div>
+        <>
+            <Header/>
+            <PlayingNow />
+        </>
     )
 }
 

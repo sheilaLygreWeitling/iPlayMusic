@@ -1,5 +1,4 @@
-
-const Playing = () => {
+const PageTitle = () => {
 
     const url = window.location.pathname
 
@@ -10,4 +9,4 @@ const Playing = () => {
     )
 }
 
-export default Playing
+export default PageTitle

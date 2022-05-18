@@ -6,7 +6,7 @@ import PulseFigure2 from "../assets/img/SVG/SVG/PulseFigure2";
 import ToggleDarkmode from "../assets/components/darkmode/ToggleDarkmode"
 
 import { motion } from 'framer-motion'
-import QuotesComponent from "../assets/components/HopePageComponents/QuotesComponent";
+import QuotesComponent from "../assets/components/homepage/QuotesComponent";
 
 const HomePage = () => {
   return (
