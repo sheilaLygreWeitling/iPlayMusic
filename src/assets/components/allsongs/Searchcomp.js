@@ -4,6 +4,8 @@ import axios from 'axios';
 const Searchcomp = () => {
     const [token, setToken] = useState('');
     const [tracksarray, setTracksArray] = useState([]);
+    const [searchArray, setSearchArray] = useState([]);
+    const [isLoading, setIsLoading] = useState(false);
 
     useEffect(() => {
         const hash = window.location.hash;
@@ -35,18 +37,13 @@ const Searchcomp = () => {
                         },
                     }
                 );
-                // console.log(data.tracks)
-                // console.log(data.tracks[0])
-                // console.log(data.tracks[0].album)
-                // data.tracks.forEach((item) => {
-                //   console.log(item.name)
-                // });
                 setTracksArray(data.tracks);
             };
 
             InitialSongs();
         }
     }, []);
+    // console.log(searchArray[0]?.images[0])
 
     const logout = () => {
         setToken('');
@@ -66,48 +63,24 @@ const Searchcomp = () => {
                 type: 'artist',
             },
         });
-        setTracksArray(data.artists.items);
-        // console.log(tracksarray)
-        // console.log(tracksarray[0])
-        // console.log(tracksarray[0].preview_url)
+        setSearchArray(data.artists.items);
     };
 
-    // https://accounts.spotify.com/da-DK/authorize?
     const AUTH_ENDPOINT = 'https://accounts.spotify.com/authorize';
     const CLIENT_ID = '9d4b16ee4a594036945fc243b00d1491';
-    // const REDIRECT_URI = "http://localhost:3000";
     const REDIRECT_URI = 'http://localhost:3000/Search';
     const RESPONSE_TYPE = 'token';
 
     const initialSongs = () => {
         return tracksarray.map((item, index) => (
             <div key={index}>
-                {/* {item.album.name} <br />
-                {item.preview_url} <br />
-                <img src={item.album.images[0].url} /> */}
+                <img src={item?.album?.images[0].url} />
             </div>
         ));
     };
-
     const searchSongs = () => {
-        return tracksarray.map((item, index) => (
-            <div key={index}>
-                <br />
-                <br />
-                {/* {item.images.length ? ( */}
-                {/* <img width={"100%"} src={item.images[0].url} /> */}
-                {/* ) : (
-          <div>No Image</div>
-        )} */}
-                {item.name}
-                <br />
-                {item.preview_url}
-            </div>
-        ));
+        return searchArray.map((item, index) => <div key={index}><img src={item?.images[0]?.url} /></div>);
     };
-
-    var InitialLoading = true;
-    // var InitialLoading = new Boolean(true);
 
     return (
         <header className="App-header">
@@ -126,12 +99,10 @@ const Searchcomp = () => {
                     type="text"
                     onChange={(e) => setSearchKey(e.target.value)}
                 />
-                <button type={'submit'}>Search</button>
+                <button onClick={() => setIsLoading(!isLoading)} type={'submit'}>Search</button>
             </form>
 
-            {searchSongs()}
-            {/* {tracksarray.length <= 0 ? <div>{initialSongs()}</div> : <div>{searchSongs()}</div>} */}
-            {InitialLoading == false ? (
+            {!isLoading ? (
                 <div>{initialSongs()}</div>
             ) : (
                 <div>{searchSongs()}</div>
