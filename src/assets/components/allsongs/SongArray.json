@@ -1,0 +1,106 @@
+{
+   "SongArray":[
+    {
+        "id": "0",
+        "title": "Lose it",
+        "artist": "Austra"
+    },
+    {
+        "id": "1",
+        "title": "Utopia",
+        "artist": "Austra"
+    },
+    {
+        "id": "2",
+        "title": "Home",
+        "artist": "Austra"
+    },
+    {
+        "id": "3",
+        "titler": "Spellwork",
+        "artist": "Austra"
+    },
+    {
+        "id": "4",
+        "title": "Habitat",
+        "artist": "Austra"
+    },    
+    {
+        "id": "5",
+        "title": "",
+        "artist": ""
+    },
+    {
+        "id": "6",
+        "titler": "",
+        "artist": ""
+    },
+    {
+        "id": "7",
+        "title": "",
+        "artist": ""
+    },
+    {
+        "id": "8",
+        "titler": "",
+        "artist": ""
+    },    {
+        "id": "9",
+        "title": "",
+        "artist": ""
+    },
+    {
+        "id": "10",
+        "titler": "",
+        "artist": ""
+    },
+    {
+        "id": "11",
+        "title": "",
+        "artist": ""
+    },
+    {
+        "id": "12",
+        "titler": "",
+        "artist": ""
+    },
+    {
+        "id": "13",
+        "title": "",
+        "artist": ""
+    },
+    {
+        "id": "14",
+        "titler": "",
+        "artist": ""
+    },    {
+        "id": "15",
+        "title": "",
+        "artist": ""
+    },
+    {
+        "id": "16",
+        "titler": "",
+        "artist": ""
+    },
+    {
+        "id": "17",
+        "title": "",
+        "artist": ""
+    },
+    {
+        "id": "18",
+        "titler": "",
+        "artist": ""
+    },    {
+        "id": "19",
+        "title": "",
+        "artist": ""
+    },
+    {
+        "id": "20",
+        "titler": "",
+        "artist": ""
+    }
+]
+}
