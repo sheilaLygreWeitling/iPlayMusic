@@ -9,17 +9,14 @@ import Playing from '../assets/components/Heading/Playing'
 const MusicPlayer = () => {
     return (
         <div>
-            <div className='flex justify-center gap-[115px] m-4'>
-                <div className='text-white'>
+                <nav className='flex justify-center gap-[115px] m-4'>
+                
                     <ArrowBack />
-                </div>
-                <div className='text-white'>
-                    <Playing />
-                </div>
-                <div className='text-white'>
+            
+                    <Playing /> 
+            
                     <Search />
-                </div>
-            </div>
+                </nav>
             <div>
                 <PlayingNow />
             </div>
