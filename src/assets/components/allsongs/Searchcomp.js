@@ -79,7 +79,11 @@ const Searchcomp = () => {
         ));
     };
     const searchSongs = () => {
-        return searchArray.map((item, index) => <div key={index}><img src={item?.images[0]?.url} /></div>);
+        return searchArray.map((item, index) => (
+            <div key={index}>
+                <img src={item?.images[0]?.url} />
+            </div>
+        ));
     };
 
     return (
@@ -99,7 +103,12 @@ const Searchcomp = () => {
                     type="text"
                     onChange={(e) => setSearchKey(e.target.value)}
                 />
-                <button onClick={() => setIsLoading(!isLoading)} type={'submit'}>Search</button>
+                <button
+                    onClick={() => setIsLoading(!isLoading)}
+                    type={'submit'}
+                >
+                    Search
+                </button>
             </form>
 
             {!isLoading ? (
