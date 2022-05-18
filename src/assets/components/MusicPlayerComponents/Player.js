@@ -9,11 +9,14 @@ const Player = (props) => {
     const audioElement = useRef(null);
     useEffect(() => {
         if (audioElement && audioElement.current) {
-            console.log(audioElement.current.duration)
+            audioElement.current.addEventListener('timeupdate', () => {
+                setCurrentTime(audioElement.current.currentTime);
+            })
         }
     }, [audioElement])
     const [isPlaying, setIsPlaying] = useState(false);
     const [duration, setDuration] = useState(0);
+    const [currentTime, setCurrentTime] = useState(0);
 
     useEffect(() => {
         if (isPlaying) {
@@ -25,6 +28,8 @@ const Player = (props) => {
 
     const handleOnLoad = () => {
         setDuration(audioElement.current.duration);
+        setCurrentTime(audioElement.current.currentTime);
+
     }
 
     const SkipSong = (forwards = true) => {
@@ -61,7 +66,7 @@ const Player = (props) => {
             <div className="c-player">
                 <audio src={props.songs[props.currentSongIndex].src} ref={audioElement} onLoadedMetadata={handleOnLoad}></audio>
                 <Details songs={props.songs} img={props.songs[props.currentSongIndex].img_src} title={props.songs[props.currentSongIndex].title} artist={props.songs[props.currentSongIndex].artist} />
-                <ProgressBar duration={duration} />
+                <ProgressBar duration={duration} currentTime={currentTime} />
                 <Controls isPlaying={isPlaying} setIsPlaying={setIsPlaying} SkipSong={SkipSong} />
             </div>
         </div>
