@@ -11,8 +11,6 @@ const MusicPlayer = () => {
                     <ArrowBack />
             
                     <Playing /> 
-            
-                    <Search />
                 </nav>
 
             <div>
