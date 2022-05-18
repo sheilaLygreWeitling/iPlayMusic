@@ -83,7 +83,8 @@ const Searchcomp = () => {
 
   const initialSongs = () => {
     return tracksarray.map((item, index) => (
-      <div key={index} data-id={item.album.id}>
+      //  data-id={item.album.id}
+      <div key={index}>
         {/* {item.album.name} <br />
         {item.preview_url} <br />
         <img src={item.album.images[0].url} /> */}
@@ -108,6 +109,7 @@ const Searchcomp = () => {
     ));
   };
 
+  var InitialLoading = true
   return (
     <header className="App-header">
       {!token ? (
@@ -125,7 +127,8 @@ const Searchcomp = () => {
         <button type={"submit"}>Search</button>
       </form>
 
-      {tracksarray.length <= 0 ? <div>{initialSongs()}</div> : <div>{searchSongs()}</div>}
+      {/* {tracksarray.length <= 0 ? <div>{initialSongs()}</div> : <div>{searchSongs()}</div>} */}
+      {InitialLoading == false ? <div>{initialSongs()}</div> : <div>{searchSongs()}</div>}
     </header>
   );
 }
