@@ -4,7 +4,7 @@ import axios from 'axios';
 import React, { Suspense } from 'react';
 
 const LazyComponent = React.lazy(() =>
-    import('../../../assets/components/LazyComponent')
+    import('./LazyComponent')
 );
 
 const Searchcomp = () => {

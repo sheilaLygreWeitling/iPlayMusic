@@ -3,7 +3,7 @@ import { Routes, Route, Navigate } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import AllSongs from "./pages/AllSongs";
 import MusicPlayer from "./pages/MusicPlayer";
-import Searchcomp from "./assets/components/allsongs/Searchcomp";
+import Searchcomp from "./assets/components/Searchcomp";
 
 function App() {
   return (
