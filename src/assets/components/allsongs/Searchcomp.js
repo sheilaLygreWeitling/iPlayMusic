@@ -40,7 +40,6 @@ const Searchcomp = () => {
         // console.log(data.tracks[0].album)
         // data.tracks.forEach((item) => {
         //   console.log(item.name)
-        //   console.log(item.id)
         // });
         setTracksArray(data.tracks);
       };
@@ -83,7 +82,6 @@ const Searchcomp = () => {
 
   const initialSongs = () => {
     return tracksarray.map((item, index) => (
-      //  data-id={item.album.id}
       <div key={index}>
         {/* {item.album.name} <br />
         {item.preview_url} <br />
