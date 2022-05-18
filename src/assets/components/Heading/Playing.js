@@ -1,9 +1,11 @@
-import React from 'react'
 
 const Playing = () => {
+
+    const url = window.location.pathname
+
     return (
         <div>
-            Playing
+          <p>{url === '/NowPlaying' ? "Playing" : "Music"}</p> 
         </div>
     )
 }
