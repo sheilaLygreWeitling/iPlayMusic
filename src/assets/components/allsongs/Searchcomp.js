@@ -1,6 +1,12 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 
+import React, { Suspense } from 'react';
+
+const LazyComponent = React.lazy(() =>
+    import('../../../assets/components/LazyComponent')
+);
+
 const Searchcomp = () => {
     const [token, setToken] = useState('');
     const [tracksarray, setTracksArray] = useState([]);
@@ -88,6 +94,13 @@ const Searchcomp = () => {
 
     return (
         <header className="App-header">
+
+            <Suspense fallback={<div>Loading...</div>}>
+                <LazyComponent />
+                <br />
+                <br />
+            </Suspense>
+
             {!token ? (
                 <a
                     href={`${AUTH_ENDPOINT}?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&response_type=${RESPONSE_TYPE}`}
