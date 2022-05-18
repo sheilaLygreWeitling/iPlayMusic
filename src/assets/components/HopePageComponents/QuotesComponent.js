@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import quotes from "../../data/quotes";
-import { motion } from 'framer-motion'
 
 
 const QuotesComponent = () => {

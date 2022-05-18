@@ -30,11 +30,6 @@ export default [
         "id": 6
     },
     {   
-        "title": "Music is the moonlight in the gloomy night of life",
-        "paragraph": "Listen to your favorite music all day, everyday",
-        "id": 6
-    },
-    {   
         "title": "Özlem er mega nice",
         "paragraph": "Listen to your favorite music all day, everyday",
         "id": 6
