@@ -10,7 +10,7 @@ const HomeNav = () => {
                 <ToggleDarkmode />
             </div>
         
-        <Link to="/Page1">
+        <Link to="/">
             <div className="border-4 border-black  dark:border-white rounded-full p-[1rem] flex justify-center items-center">
                 <BsHeart />
             </div>
