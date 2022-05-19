@@ -9,8 +9,6 @@ const MusicPlayer = () => {
         <>
             <Header />
             <PlayingNow />
-
-            <FetchSongs />
         </>
     );
 };

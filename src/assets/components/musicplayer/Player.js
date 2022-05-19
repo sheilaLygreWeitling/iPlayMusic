@@ -1,4 +1,3 @@
-
 import React, { useState, useRef, useEffect } from 'react'
 import Details from './Details'
 import Controls from './Controls'
@@ -57,7 +56,6 @@ const Player = (props) => {
             });
         }
     }
-
 
 
 
