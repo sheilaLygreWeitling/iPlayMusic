@@ -3,10 +3,6 @@ import axios from 'axios';
 
 import React, { Suspense } from 'react';
 
-const LazyComponent = React.lazy(() =>
-    import('./LazyComponent')
-);
-
 const Searchcomp = () => {
     const [token, setToken] = useState('');
     const [tracksarray, setTracksArray] = useState([]);
@@ -94,12 +90,6 @@ const Searchcomp = () => {
 
     return (
         <header className="App-header">
-
-            <Suspense fallback={<div>Loading...</div>}>
-                <LazyComponent />
-                <br />
-                <br />
-            </Suspense>
 
             {!token ? (
                 <a
