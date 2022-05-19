@@ -10,10 +10,15 @@ const MusicPlayer = () => {
     return (
         <>
             <Header />
+
+            {/*
+                playing now ligge inde i fetch ??
+                inde i FetchSongs:
+                <PlayingNow whatever="" />
+            */}
             <PlayingNow />
 
             <ThinText text="Nothing found..." />
-            <FetchSongs />
         </>
     );
 };

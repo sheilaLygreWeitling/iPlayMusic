@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 
-const FetchSongs = () => {
+const FetchSongs = (props) => {
     const [token, setToken] = useState('');
     const [tracksarray, setTracksArray] = useState([]);
 
@@ -37,11 +37,13 @@ const FetchSongs = () => {
                 );
                 setTracksArray(data.tracks);
                 // console.log(data.tracks[0]);
+                return setTracksArray
             };
 
             InitialSongs();
         }
     }, []);
+    console.log(tracksarray)
 
     const logout = () => {
         setToken('');
@@ -61,6 +63,8 @@ const FetchSongs = () => {
                 {/* audio ref="audio_tag" */}
                 <audio src={item?.preview_url} type="audio/mpeg" controls autoPlay />
 
+                {props.text}
+
             </div>
         ));
     };
@@ -79,8 +83,10 @@ const FetchSongs = () => {
             )}
 
             <div>{initialSongs()}</div>
+
         </header>
+
     );
 }
 
-export default FetchSongs;
+export default initialSongs

@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import Player from './Player'
 
+import FetchSongs from '../assets/components/musicplayer/FetchSongs';
+
 const songs = [
     {
         title: "A Horse with No Name",
