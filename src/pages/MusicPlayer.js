@@ -19,6 +19,7 @@ const MusicPlayer = () => {
             <PlayingNow />
 
             <ThinText text="Nothing found..." />
+            <FetchSongs text="props text..." />
         </>
     );
 };

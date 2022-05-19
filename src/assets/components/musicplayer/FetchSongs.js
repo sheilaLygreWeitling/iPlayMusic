@@ -37,13 +37,11 @@ const FetchSongs = (props) => {
                 );
                 setTracksArray(data.tracks);
                 // console.log(data.tracks[0]);
-                return setTracksArray
             };
 
             InitialSongs();
         }
     }, []);
-    console.log(tracksarray)
 
     const logout = () => {
         setToken('');
@@ -83,10 +81,8 @@ const FetchSongs = (props) => {
             )}
 
             <div>{initialSongs()}</div>
-
         </header>
-
     );
 }
 
-export default initialSongs
+export default FetchSongs;
