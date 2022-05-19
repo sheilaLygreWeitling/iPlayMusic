@@ -36,7 +36,7 @@ const FetchSongs = () => {
                     }
                 );
                 setTracksArray(data.tracks);
-                console.log(data.tracks[0]);
+                // console.log(data.tracks[0]);
             };
 
             InitialSongs();
