@@ -1,14 +1,18 @@
-import React from 'react'
-import PlayingNow from '../assets/components/musicplayer/PlayingNow'
-import Header from '../assets/components/header/Header'
+import React from 'react';
+import PlayingNow from '../assets/components/musicplayer/PlayingNow';
+import Header from '../assets/components/header/Header';
+
+import FetchSongs from '../assets/components/musicplayer/FetchSongs';
 
 const MusicPlayer = () => {
     return (
         <>
-            <Header/>
+            <Header />
             <PlayingNow />
-        </>
-    )
-}
 
-export default MusicPlayer
+            <FetchSongs />
+        </>
+    );
+};
+
+export default MusicPlayer;
