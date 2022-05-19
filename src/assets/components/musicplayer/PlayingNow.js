@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import MusicPulse from './MusicPulse';
 import Player from './Player'
 
 const songs = [

@@ -7,11 +7,11 @@ const Controls = (props) => {
     return (
         <div>
             <div className="flex justify-center gap-[20px]">
-                <button className='musicPlayer-btn skipBackward-btn text-white' onClick={() => props.SkipSong(false)} >
-                    <AiFillStepBackward />
+                <button className='musicPlayer-btn skipBackward-btn dark:text-white' onClick={() => props.SkipSong(false)} >
+                    <AiFillStepBackward className="text-headers2" />
                 </button>
-                <button className='musicPlayer-btn backwards-btn text-white'>
-                    <AiOutlineBackward />
+                <button className='musicPlayer-btn backwards-btn dark:text-white'>
+                    <AiOutlineBackward className="text-headers2"  />
                 </button>
                 <button className='musicPlayer-btn play-btn text-[100px]' onClick={() => props.setIsPlaying(!props.isPlaying)}>
                     <svg width="0" height="0">
@@ -23,11 +23,11 @@ const Controls = (props) => {
                     </svg>
                     {props.isPlaying ? <BsPauseFill style={{ fill: "url(#a)" }} /> : <BsFillPlayFill style={{ fill: "url(#a)" }} />}
                 </button>
-                <button className='musicPlayer-btn forward-btn text-white'>
-                    <AiFillForward />
+                <button className='musicPlayer-btn forward-btn dark:text-white'>
+                    <AiFillForward className="text-headers2"  />
                 </button>
-                <button className='musicPlayer-btn skipForward-btn text-white' onClick={() => props.SkipSong()}  >
-                    <AiFillStepForward />
+                <button className='musicPlayer-btn skipForward-btn dark:text-white' onClick={() => props.SkipSong()}  >
+                    <AiFillStepForward className="text-headers2"  />
                 </button>
             </div>
         </div>

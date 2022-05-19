@@ -1,16 +1,34 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { setState } from "react";
+import MusicDisc from '../../img/MusicDisc.png';
+import MusicPulse from './MusicPulse';
+import { motion } from 'framer-motion';
 
 
 const Details = (props) => {
     console.log(props.img);
+    /* const [ musicDisc, useMusicDisc ] = useState() */
+
     return (
-        <div className='text-center'>
-            <div className="details-img flex justify-center">
-                <img src={props.img} alt="" className=' rounded-[1000px] w-[125px] h-[125px] m-[50px]' />
+        <div className="text-center flex justify-center flex-col items-center">
+            
+            <div className="details-img w-[280px] h-[280px] relative flex justify-center items-center mt-[4rem] mb-[3rem]">
+                <MusicPulse className="absolute" />
+                <motion.img src={props.img == null ? MusicDisc :  props.img} className="absolute rounded-full w-[260px] h-[260px]" 
+                    animate={{
+                        rotate: 360
+                    }}
+                    transition={{ 
+                        ease: "linear",
+                        repeat: Infinity, 
+                        duration: 7  
+                    }}
+                />
             </div>
-            <div>
-                <h3 className="details-title text-white">{props.title}</h3>
-                <h4 className="details-artist text-white">{props.artist}</h4>
+    
+            <div className="my-[2rem]">
+                <h3 className="details-title dark:text-white">{props.title}</h3>
+                <h4 className="details-artist dark:text-white">{props.artist}</h4>
             </div>
         </div>
     )
