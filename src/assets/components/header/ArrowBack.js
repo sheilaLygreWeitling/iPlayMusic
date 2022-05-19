@@ -1,17 +1,15 @@
 import React from 'react'
 import { MdOutlineArrowBackIos } from "react-icons/md"
-/* import { useHistory } from 'react-router-dom' */
+import { useNavigate } from 'react-router-dom' 
 
 
 const ArrowBack = () => {
 
-    //const history = useHistory();
-
-    //onClick={() => history.goBack()} 
+    const navigate = useNavigate();
 
     return (
         <div> 
-             <MdOutlineArrowBackIos/>
+            <MdOutlineArrowBackIos onClick={() => navigate(-1)}/>
         </div>
     )
 }
