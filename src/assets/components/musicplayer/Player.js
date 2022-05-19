@@ -6,6 +6,7 @@ import ProgressBar from './ProgressBar'
 
 const Player = (props) => {
     console.log(props.songs[props.currentSongIndex].src)
+
     const audioElement = useRef(null);
     useEffect(() => {
         if (audioElement && audioElement.current) {
@@ -73,4 +74,4 @@ const Player = (props) => {
     )
 }
 
-export default Player 
+export default Player
