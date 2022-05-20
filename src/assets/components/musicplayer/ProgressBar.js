@@ -8,7 +8,6 @@ const secToMin = (time) => {
 };
 
 
-
 const ProgressBar = (props) => {
     return (
         <div className="flex flex-col items-center py-[50px]">
