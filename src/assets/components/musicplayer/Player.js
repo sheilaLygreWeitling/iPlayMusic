@@ -4,7 +4,7 @@ import Controls from './Controls'
 import ProgressBar from './ProgressBar'
 
 const Player = (props) => {
-    console.log(props.songs[props.currentSongIndex].src)
+
     const audioElement = useRef(null);
     useEffect(() => {
         if (audioElement && audioElement.current) {
@@ -62,8 +62,8 @@ const Player = (props) => {
     return (
         <div>
             <div className="c-player">
-                <audio src={props.songs[props.currentSongIndex].src} ref={audioElement} onLoadedMetadata={handleOnLoad}></audio>
-                <Details songs={props.songs} img={props.songs[props.currentSongIndex].img_src} title={props.songs[props.currentSongIndex].title} artist={props.songs[props.currentSongIndex].artist} />
+                <audio src={props.songs[props.currentSongIndex].preview_url} ref={audioElement} onLoadedMetadata={handleOnLoad}></audio>
+                <Details songs={props.songs} img={props.songs[props.currentSongIndex].album?.images[0].url} title={props.songs[props.currentSongIndex].name} artist={props.songs[props.currentSongIndex].artists[0].name} />
                 <ProgressBar duration={duration} currentTime={currentTime} />
                 <Controls isPlaying={isPlaying} setIsPlaying={setIsPlaying} SkipSong={SkipSong} />
             </div>
@@ -71,4 +71,4 @@ const Player = (props) => {
     )
 }
 
-export default Player 
+export default Player

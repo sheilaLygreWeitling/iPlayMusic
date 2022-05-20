@@ -8,6 +8,7 @@ const MusicPlayer = () => {
     return (
         <>
             <Header />
+
             <PlayingNow />
         </>
     );
