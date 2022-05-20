@@ -92,12 +92,6 @@ const Searchcomp = () => {
         ));
     };
 
-    console.log(tracksarray)
-
-    console.log(tracksarray[0])
-
-    // console.log(tracksarray[0].name)
-
     return (
         <header className="App-header">
 
