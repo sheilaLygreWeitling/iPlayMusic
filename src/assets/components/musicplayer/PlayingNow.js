@@ -82,6 +82,9 @@ const PlayingNow = () => {
     const initialSongs = () => {
         return tracksarray.map((item, index) => (
             <div key={index}>
+
+                {item?.name}
+                {item?.name.artists}
                 <img src={item?.album?.images[0].url} />
 
                 <audio src={item?.preview_url} type="audio/mpeg" controls autoPlay />
