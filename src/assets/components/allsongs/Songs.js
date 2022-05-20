@@ -129,32 +129,31 @@ const secToMin = (time) => {
 const initialSongs = () => {
     return tracksarray.map((item, index) => (
         <ul className="flex flex-col gap-y-6">
-            <li key={index} className="flex gap-4 items-center mr-[25px] ml-[19px]">
+            <a href='/nowplaying'>
+                <li key={index} className="flex gap-4 items-center mr-[25px] ml-[19px]">
 
-                <PlayIcon />
-                {/* <img src={item?.album?.images[0].url} /> */}
-                <div>
-                    <h2 className="text-headers6 font-bold">{item?.name}</h2>
-                    <h3 className="text-small">{item?.album?.artists[0].name}</h3>
-                </div>
-                {/* {initialSongs()} */}
+                    <PlayIcon />
+                    {/* <img src={item?.album?.images[0].url} /> */}
 
-                <p className="text-small  ml-auto">
-                    {/* {song.duration} */}
+                    <div>
+                        <h2 className="text-headers6 font-bold">{item?.name}</h2>
+                        <h3 className="text-small">{item?.album?.artists[0].name}</h3>
+                    </div>
+                    {/* {initialSongs()} */}
 
-                    {/*
-                    let min = Math.floor(time / 60);
-                    let seconds = time - min * 60;
-                    */}
-                    {/* {(Math.floor(tracksarray[index].duration_ms / 1000).split())} */}
+                    <p className="text-small  ml-auto">
+                        {/* {song.duration} */}
 
-                    {secToMin(tracksarray[index].duration_ms)}
+                        {/*
+                        let min = Math.floor(time / 60);
+                        let seconds = time - min * 60;
+                        */}
+                        {/* {(Math.floor(tracksarray[index].duration_ms / 1000).split())} */}
 
-
-                </p>
-
-            </li>
-
+                        {secToMin(tracksarray[index].duration_ms)}
+                    </p>
+                </li>
+            </a>
         </ul>
     ));
 };
