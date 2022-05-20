@@ -62,12 +62,14 @@ const Player = (props) => {
 
 
 
-
+    // {item?.album?.images[0].url}
+    // props.songs[props.currentSongIndex].img_src
+    // props.songs[props.currentSongIndex].album?.images[0].url
     return (
         <div>
             <div className="c-player">
                 <audio src={props.songs[props.currentSongIndex].preview_url} ref={audioElement} onLoadedMetadata={handleOnLoad}></audio>
-                <Details songs={props.songs} img={props.songs[props.currentSongIndex].img_src} title={props.songs[props.currentSongIndex].title} artist={props.songs[props.currentSongIndex].artist} />
+                <Details songs={props.songs} img={props.songs[props.currentSongIndex].album?.images[0].url} title={props.songs[props.currentSongIndex].title} artist={props.songs[props.currentSongIndex].artist} />
                 <ProgressBar duration={duration} currentTime={currentTime} />
                 <Controls isPlaying={isPlaying} setIsPlaying={setIsPlaying} SkipSong={SkipSong} />
             </div>
