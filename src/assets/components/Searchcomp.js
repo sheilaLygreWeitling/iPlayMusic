@@ -43,6 +43,7 @@ const Searchcomp = () => {
                         },
                     }
                 );
+                console.log("fetch", data.tracks)
                 setTracksArray(data.tracks);
             };
 
@@ -91,6 +92,12 @@ const Searchcomp = () => {
             </div>
         ));
     };
+
+    console.log(tracksarray)
+
+    console.log(tracksarray[0])
+
+    // console.log(tracksarray[0].name)
 
     return (
         <header className="App-header">
