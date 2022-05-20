@@ -74,8 +74,7 @@ const Searchcomp = () => {
 
     const AUTH_ENDPOINT = 'https://accounts.spotify.com/authorize';
     const CLIENT_ID = '9d4b16ee4a594036945fc243b00d1491';
-    // const REDIRECT_URI = 'http://localhost:3000/Search';
-    const REDIRECT_URI = 'https://i-play-music-o7fcbo42n-sheilalygreweitling.vercel.app/';
+    const REDIRECT_URI = 'http://localhost:3000/Search';
     const RESPONSE_TYPE = 'token';
 
     const initialSongs = () => {
