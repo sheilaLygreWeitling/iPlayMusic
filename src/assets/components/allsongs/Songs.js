@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { BsPause } from "react-icons/bs";
 import PlayIcon from "../../img/SVG/PlayIcon";
 
 const songAray = [
@@ -77,13 +78,23 @@ const songAray = [
 
 const Songs = () => {
 
-  const [playicon, setPlayicon] = useState(true)
+  // const [pause, setPause] = useState(false)
+  // const [toggledButtonId, setToggledButtonId] = useState(false);
+const [isToggled, setToggled] = useState(false)
+  // function toggleButton(song) {
+  //     setToggledButtonId(song.id);
+  // }
+const toggleButton = () => {
+  setToggled(!isToggled)
+}
+
     return ( 
 
-    <ul className="flex flex-col gap-y-6">{songAray.map(song =>
-  
-      <li key={song.id} className="flex gap-4 items-center mr-[25px] ml-[19px]" >
-       <PlayIcon />
+    <ul className="flex flex-col gap-y-6">{songAray.map((song, i) =>{
+      
+      // const isToggled = song.id === toggledButtonId;
+      return <li key={i} className="flex gap-4 items-center mr-[25px] ml-[19px]" >
+    <button clicked={isToggled} onClick={toggleButton}> {isToggled ?  <div className="bg-gradient-to-r from-gradientRedFrom to-gradientRedTo h-[30px] w-[30px] flex justify-center items-center rounded-full"><BsPause className="text-headers4"/></div> :  <PlayIcon/>}</button> 
         
         <div>
           <h2 className="text-headers6 font-bold">{song.title}</h2>
@@ -92,7 +103,7 @@ const Songs = () => {
 
         <p className="text-small  ml-auto">{song.duration}</p>
       </li>
-  
+  }
     )}</ul>  
   
   );
