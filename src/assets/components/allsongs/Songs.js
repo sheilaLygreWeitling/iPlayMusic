@@ -118,6 +118,14 @@ useEffect(() => {
     }
 }, []);
 
+
+const secToMin = (time) => {
+    let min = Math.floor(time / 60000);
+    let seconds = ((time % 60000) / 1000).toFixed(0);
+    return `${min.toString()}:${seconds.toString().length <= 1 ? `0${seconds}` : seconds.toString()
+        }`;
+};
+
 const initialSongs = () => {
     return tracksarray.map((item, index) => (
         <ul className="flex flex-col gap-y-6">
@@ -133,6 +141,16 @@ const initialSongs = () => {
 
                 <p className="text-small  ml-auto">
                     {/* {song.duration} */}
+
+                    {/*
+                    let min = Math.floor(time / 60);
+                    let seconds = time - min * 60;
+                    */}
+                    {/* {(Math.floor(tracksarray[index].duration_ms / 1000).split())} */}
+
+                    {secToMin(tracksarray[index].duration_ms)}
+
+
                 </p>
 
             </li>
@@ -140,6 +158,9 @@ const initialSongs = () => {
         </ul>
     ));
 };
+
+console.log(tracksarray)
+console.log()
 
   const [playicon, setPlayicon] = useState(true)
 //     return (
