@@ -43,7 +43,6 @@ const Searchcomp = () => {
                         },
                     }
                 );
-                console.log("fetch", data.tracks)
                 setTracksArray(data.tracks);
             };
 
