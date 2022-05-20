@@ -44,8 +44,10 @@ const FetchSongs = (props) => {
         return tracksarray.map((item, index) => (
             <div key={index}>
                 <img src={item?.album?.images[0].url} />
-
-                <audio src={item?.preview_url} type="audio/mpeg" controls autoPlay />
+                {/* <audio src={item?.preview_url} type="audio/mpeg" controls autoPlay /> */}
+                {item?.name}
+                <br />
+                {item?.album?.artists[0].name}
             </div>
         ));
     };
