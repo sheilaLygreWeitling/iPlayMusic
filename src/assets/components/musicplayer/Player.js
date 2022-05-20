@@ -69,7 +69,7 @@ const Player = (props) => {
         <div>
             <div className="c-player">
                 <audio src={props.songs[props.currentSongIndex].preview_url} ref={audioElement} onLoadedMetadata={handleOnLoad}></audio>
-                <Details songs={props.songs} img={props.songs[props.currentSongIndex].album?.images[0].url} title={props.songs[props.currentSongIndex].title} artist={props.songs[props.currentSongIndex].artist} />
+                <Details songs={props.songs} img={props.songs[props.currentSongIndex].album?.images[0].url} title={props.songs[props.currentSongIndex].name} artist={props.songs[props.currentSongIndex].artists[0].name} />
                 <ProgressBar duration={duration} currentTime={currentTime} />
                 <Controls isPlaying={isPlaying} setIsPlaying={setIsPlaying} SkipSong={SkipSong} />
             </div>
