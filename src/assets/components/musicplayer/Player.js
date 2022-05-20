@@ -5,8 +5,6 @@ import Controls from './Controls'
 import ProgressBar from './ProgressBar'
 
 const Player = (props) => {
-    console.log(props.songs)
-    //console.log(props.songs[props.currentSongIndex].preview_url)
 
     const audioElement = useRef(null);
     useEffect(() => {
