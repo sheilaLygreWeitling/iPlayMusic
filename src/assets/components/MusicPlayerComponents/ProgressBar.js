@@ -1,4 +1,3 @@
-import React, { useRef } from "react";
 
 const secToMin = (time) => {
     let min = Math.floor(time / 60);
@@ -11,9 +10,9 @@ const secToMin = (time) => {
 
 const ProgressBar = (props) => {
     return (
-        <div className="flex flex-col items-center my-[1rem]">
+        <div className="flex flex-col items-center py-[50px]">
             <input type="range" name="track" id="track" value={Math.floor(props.currentTime)} max={Math.floor(props.duration)} step="1" className="w-[20rem] h-0.5 appearance-none" />
-            <div className="w-[20rem] flex justify-between my-[1rem] ">
+            <div className="flex space-x-[16rem] pt-4 ">
                 <div className="">
                     <p>{secToMin(Math.floor(props.currentTime))}</p>
                 </div>

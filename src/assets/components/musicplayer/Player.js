@@ -1,4 +1,3 @@
-
 import React, { useState, useRef, useEffect } from 'react'
 import Details from './Details'
 import Controls from './Controls'
@@ -60,9 +59,6 @@ const Player = (props) => {
 
 
 
-    // {item?.album?.images[0].url}
-    // props.songs[props.currentSongIndex].img_src
-    // props.songs[props.currentSongIndex].album?.images[0].url
     return (
         <div>
             <div className="c-player">
